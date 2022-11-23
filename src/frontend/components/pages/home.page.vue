@@ -1,56 +1,5 @@
 <template>
-  
 
-  <!--  <Knob v-model="value" valueColor="SlateGray" rangeColor="MediumTurquoise"/>-->
-  <!--  <Accordion>-->
-  <!--    <AccordionTab header="Header I">-->
-  <!--      Content-->
-  <!--    </AccordionTab>-->
-  <!--    <AccordionTab header="Header II">-->
-  <!--      Content-->
-  <!--    </AccordionTab>-->
-  <!--    <AccordionTab header="Header III">-->
-  <!--      Content-->
-  <!--    </AccordionTab>-->
-  <!--  </Accordion>-->
-  <!--  <div class="grid">-->
-  <!--    <div class="col">1</div>-->
-  <!--    <div class="col">2</div>-->
-  <!--    <div class="col">3</div>-->
-  <!--  </div>-->
-  <!--  <Button label="Submit" icon="pi pi-check" iconPos="right"/>-->
-  <!--  <i class="pi pi-check"></i>-->
-  <!--  <i class="pi pi-times"></i>-->
-  <!--  <Card>-->
-  <!--    <template #header>-->
-  <!--      <div class="flex justify-content-center flex-wrap card-container yellow-container">-->
-  <!--        <div-->
-  <!--            class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">-->
-  <!--          1-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--            class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">-->
-  <!--          2-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--            class="flex align-items-center justify-content-center w-4rem h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">-->
-  <!--          3-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </template>-->
-  <!--    <template #title>-->
-  <!--      Advanced Card-->
-  <!--    </template>-->
-  <!--    <template #content>-->
-  <!--      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam-->
-  <!--      deserunt-->
-  <!--      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!-->
-  <!--    </template>-->
-  <!--    <template #footer>-->
-  <!--      <Button icon="pi pi-check" label="Save"/>-->
-  <!--      <Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em"/>-->
-  <!--    </template>-->
-  <!--  </Card>-->
 
 </template>
 
