@@ -28,7 +28,12 @@ const routes: RouteRecordRaw[] = [
     {
         name: 'Inquiry_cancellation',
         path: '/inquiry_cancellation',  component : () => import('./components/pages/InquiryandCancellation.page.vue')
+    },
+    {
+        name : 'StopConsultation',
+        path : '/stop_consultation_query' , component : () => import('./components/pages/stop_consultation_query.page.vue')
     }
+
 ]
 
 export const router = createRouter({
