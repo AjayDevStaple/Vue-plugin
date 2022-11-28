@@ -32,7 +32,24 @@ const routes: RouteRecordRaw[] = [
     {
         name : 'StopConsultation',
         path : '/stop_consultation_query' , component : () => import('./components/pages/stop_consultation_query.page.vue')
-    }
+    },
+    {
+        name : 'Physicianregistration',
+        path : '/physician_registration' , component : () => import('./components/pages/phsyician_registration.page.vue')
+    },
+    {
+        name : "Booking" ,
+        path: '/booking' , component : () =>  import('./../frontend/components/pages/Booking.page.vue')
+    },
+   
+    {
+        name: 'SectionRegistration',
+        path: '/registration', component: () => import('./components/pages/sectionregistration/registration.page.vue')
+    },
+    {
+        name: 'SubService',
+        path: '/subservice', component: () => import('./components/pages/sectionregistration/subservice.page.vue')
+    },
 
 ]
 

@@ -1,0 +1,1747 @@
+<template>
+    <div class="col-12">
+        <h1 class="post-title">registration</h1>
+    </div>
+
+
+
+    <!-- <ul v-for="(value, index) in arrayData0" :key="index">
+        <li> {{ value.color }}</li>
+    </ul>
+
+
+    <p>
+        Once upone a time...
+        <button @click="showMore = true">Read more</button>
+    </p>
+    <p v-show="showMore">...in Vueland!</p> -->
+
+
+
+
+    <div class="mobile-accord">
+        <Accordion>
+            <AccordionTab header="Header I">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+                    repudiandae numquam</p>
+            </AccordionTab>
+            <AccordionTab header="Header II">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+                    repudiandae numquam</p>
+            </AccordionTab>
+            <AccordionTab header="Header III">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+                    repudiandae numquam</p>
+            </AccordionTab>
+        </Accordion>
+    </div>
+
+    <div class="register">
+        <article class="list-body">
+            <section class="list" v-for="(value, index) in arrayData0">
+                <h3>
+                    <span>{{ value.deptSys }}</span>
+                    <i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content" >
+                    <ul >
+                        <li v-for="(abcdata, index) in value.deptList">
+                            <a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A05&amp;deptCode=A0504&amp;deptChName=%E6%96%B0%E5%86%A0%E7%96%AB%E8%8B%97%E6%8E%A5%E7%A8%AE%EF%BC%9ABNT&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="COVID-19 Vaccination: BNT">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">{{ abcdata.deptName }}</font>
+                                </font>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">COVID-19 Screening Clinic</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A07&amp;deptCode=A0701&amp;deptChName=%E8%87%AA%E8%B2%BBPCR%E7%AF%A9%E6%AA%A2%E9%96%80%E8%A8%BA(%E5%90%AB%E7%89%B9%E6%80%A5%E4%BB%B6)&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Self-funded PCR screening clinic (including urgent cases)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Self-funded PCR screening clinic (including
+                                        urgent cases)</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A07&amp;deptCode=A0702&amp;deptChName=%E8%87%AA%E8%B2%BB%E5%BF%AB%E7%AF%A9%E9%96%80%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Self-funded quick screening clinic">
+                                <font style="vertical-align: inherit;">
+                                    <font class="" style="vertical-align: inherit;">Self-funded quick screening clinic
+                                    </font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Video consultation</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A06&amp;deptCode=A0602&amp;deptChName=%E5%BF%AB%E7%AF%A9%E9%99%BD%E6%80%A7%E5%A0%B1%E5%91%8A%E5%88%A4%E8%AE%80%E7%89%B9%E8%A8%BA/%E7%A2%BA%E8%A8%BA%E8%80%85%E8%A6%96%E8%A8%8A%E7%89%B9%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title"
+                                title="Special diagnosis of rapid screening positive report / video diagnosis of confirmed cases">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Special diagnosis of rapid screening positive
+                                        report / video diagnosis of confirmed cases</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A06&amp;deptCode=A0601&amp;deptChName=%E8%A6%96%E8%A8%8A%E7%89%B9%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Video consultation">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Video consultation</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Department of Internal Medicine</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=17&amp;deptChName=%E8%85%8E%E8%87%9F%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Nephrology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Nephrology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=15&amp;deptChName=%E8%A1%80%E6%B6%B2%E8%85%AB%E7%98%A4%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Hematology Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hematology Oncology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=16&amp;deptChName=%E8%83%83%E8%85%B8%E8%82%9D%E8%86%BD%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Gastrointestinal Hepatobiliary">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Gastrointestinal Hepatobiliary</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=1D&amp;deptChName=%E6%84%9F%E6%9F%93%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Infectious Diseases">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Infectious Diseases</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=1C&amp;deptChName=%E9%A2%A8%E6%BF%95%E5%85%8D%E7%96%AB%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Division of Rheumatology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Division of Rheumatology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=18&amp;deptChName=%E6%96%B0%E9%99%B3%E4%BB%A3%E8%AC%9D%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Metabolism">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Metabolism</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=19&amp;deptChName=%E7%A5%9E%E7%B6%93%E5%85%A7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Neurology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Neurology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=10&amp;deptChName=%E4%B8%80%E8%88%AC%E5%85%A7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="General Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">General Medicine</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=13&amp;deptChName=%E8%83%B8%E8%85%94%E5%85%A7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Chest Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Chest Medicine</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=1&amp;deptCode=14&amp;deptChName=%E5%BF%83%E8%87%9F%E8%A1%80%E7%AE%A1%E5%85%A7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Cardiovascular Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cardiovascular Medicine</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Department of Surgery</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=21&amp;deptChName=%E6%95%B4%E5%BD%A2%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="plastic surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">plastic surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=20&amp;deptChName=%E4%B8%80%E8%88%AC%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="general surgey">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">general surgey</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=2X&amp;deptChName=%E7%9C%BC%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="ophthalmology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">ophthalmology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=22&amp;deptChName=%E9%AA%A8%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="orthopedics">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">orthopedics</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=24&amp;deptChName=%E5%BF%83%E8%87%9F%E8%A1%80%E7%AE%A1%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Cardiovascular Surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Cardiovascular Surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=26&amp;deptChName=%E5%A4%A7%E8%85%B8%E7%9B%B4%E8%85%B8%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Colorectal Surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Colorectal Surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=27&amp;deptChName=%E6%B3%8C%E5%B0%BF%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Urology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Urology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=29&amp;deptChName=%E7%A5%9E%E7%B6%93%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="neurosurgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">neurosurgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=23&amp;deptChName=%E8%83%B8%E8%85%94%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Thoracic Surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Thoracic Surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=2&amp;deptCode=2Y&amp;deptChName=%E8%80%B3%E9%BC%BB%E5%96%89%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="ENT">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">ENT</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Gynecology and Pediatrics</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=8&amp;deptCode=2B&amp;deptChName=%E5%B0%8F%E5%85%92%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Pediatric Surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Pediatric Surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=8&amp;deptCode=37&amp;deptChName=%E5%A9%A6%E7%94%A2%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Obstetrics and Gynecology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Obstetrics and Gynecology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=8&amp;deptCode=40&amp;deptChName=%E5%B0%8F%E5%85%92%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Pediatrics">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Pediatrics</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Other specialties</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=00&amp;deptChName=%E8%BA%AB%E5%BF%83%E6%9A%A8%E7%B2%BE%E7%A5%9E%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Psychology and Psychiatry">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Psychology and Psychiatry</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=70&amp;deptChName=%E5%BE%A9%E5%81%A5%E9%86%AB%E5%AD%B8%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Rehabilitation Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Rehabilitation Medicine</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=1E&amp;deptChName=%E8%81%B7%E6%A5%AD%E9%86%AB%E5%AD%B8%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Occupational Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Occupational Medicine</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=60&amp;deptChName=%E6%94%BE%E5%B0%84%E8%A8%BA%E6%96%B7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Diagnostic Radiology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Diagnostic Radiology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=65&amp;deptChName=%E6%94%BE%E5%B0%84%E8%85%AB%E7%98%A4%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Radiation Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Radiation Oncology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=1A&amp;deptChName=%E5%AE%B6%E5%BA%AD%E9%86%AB%E5%AD%B8%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Family Medicine">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Family Medicine</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=9&amp;deptCode=11&amp;deptChName=%E7%9A%AE%E8%86%9A%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="dermatology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">dermatology</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Integrative Outpatient Clinic of Medical Oncology
+                                Center</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01001&amp;deptChName=%E8%82%BA%E5%8F%8A%E8%83%B8%E8%85%94%E7%B3%BB%E8%85%AB%E7%98%A4&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Tumors of lung and thoracic cavity">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Tumors of lung and thoracic cavity</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01002&amp;deptChName=%E6%B3%8C%E5%B0%BF%E7%B3%BB%E7%B5%B1%E8%85%AB%E7%98%A4&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Urinary System Tumors">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Urinary System Tumors</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01003&amp;deptChName=%E5%A9%A6%E7%A7%91%E8%85%AB%E7%98%A4&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Gynecologic Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Gynecologic Oncology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01004&amp;deptChName=%E4%B9%B3%E6%88%BF%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="breast surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">breast surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01005&amp;deptChName=%E6%B6%88%E5%8C%96%E7%B3%BB%E3%80%81%E4%B9%B3%E6%88%BF%E8%85%AB%E7%98%A4%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Digestive system, breast tumor surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Digestive system, breast tumor surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01006&amp;deptChName=%E8%A1%80%E6%B6%B2%E8%85%AB%E7%98%A4%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Hematology Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hematology Oncology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01007&amp;deptChName=%E6%B6%88%E5%8C%96%E7%B3%BB%E8%85%AB%E7%98%A4%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Gastrointestinal Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Gastrointestinal Oncology</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01008&amp;deptChName=%E9%BC%BB%E5%92%BD%E5%8F%8A%E9%A0%AD%E9%A0%B8%E9%83%A8%E8%85%AB%E7%98%A4%E7%89%B9%E5%88%A5%E9%96%80%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Nasopharyngeal and Head and Neck Cancer Special Clinic">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Nasopharyngeal and Head and Neck Cancer
+                                        Special Clinic</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A01&amp;deptCode=A01010&amp;deptChName=%E6%94%BE%E5%B0%84%E8%85%AB%E7%98%A4%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Radiation Oncology">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Radiation Oncology</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">dental</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=10&amp;deptCode=D2&amp;deptChName=%E5%8F%A3%E8%85%94%E9%A1%8E%E9%9D%A2%E5%A4%96%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Oral and Maxillofacial Surgery">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Oral and Maxillofacial Surgery</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=10&amp;deptCode=D6&amp;deptChName=%E7%89%99%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="dental">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">dental</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Prevention and Health</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A02&amp;deptCode=A0201&amp;deptChName=%E4%B8%80%E8%88%AC%E9%AB%94%E6%AA%A2/%E6%88%90%E4%BA%BA%E5%81%A5%E6%AA%A2&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="General Physical Examination/Adult Health Examination">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">General Physical Examination/Adult Health
+                                        Examination</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/deptcode.php?PKey=1&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Advanced Health Checkup">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Advanced Health Checkup</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/deptcode.php?PKey=2&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Nutrition">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Nutrition</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/deptcode.php?PKey=3&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Pediatric Nutrition">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Pediatric Nutrition</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/deptcode.php?PKey=4&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="tumor nutrition">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">tumor nutrition</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">medical cosmetology</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/deptcode.php?PKey=9&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Beauty and treatment special outpatient clinic">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Beauty and treatment special outpatient
+                                        clinic</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Special clinic</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A04&amp;deptCode=A0405&amp;deptChName=%E7%96%BC%E7%97%9B%E7%89%B9%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Special diagnosis of pain">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Special diagnosis of pain</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A04&amp;deptCode=A0406&amp;deptChName=%E5%A4%96%E5%82%B7%E7%A7%91&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Trauma">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Trauma</font>
+                                </font>
+                            </a></li>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A04&amp;deptCode=3&amp;deptChName=%E9%A0%90%E7%AB%8B%E9%86%AB%E7%99%82%E7%85%A7%E8%AD%B7%E8%AB%AE%E8%A9%A2&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Advance Medical Care Consultation">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Advance Medical Care Consultation</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="list">
+                <h3
+                    onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}">
+                    <span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Hospice palliative care clinic</font>
+                        </font>
+                    </span><i class="fas fa-chevron-circle-down btn-i"></i>
+                </h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A08&amp;deptCode=A0801&amp;deptChName=%E5%AE%89%E5%AF%A7%E7%B7%A9%E5%92%8C%E9%86%AB%E7%99%82%E9%96%80%E8%A8%BA&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                                class="dot_title" title="Hospice palliative care clinic">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Hospice palliative care clinic</font>
+                                </font>
+                            </a></li>
+                    </ul>
+                </div>
+            </section> -->
+        </article>
+    </div>
+</template>
+  
+<script lang="ts">
+import { _services } from './../../../../Services/Api/index'
+
+export default {
+    name: 'HomePage',
+    components: {},
+    data() {
+        return {
+            arrayData0: null,
+            arrayData1: null,
+            showMore: false
+        }
+    },
+    methods: {
+        getData() {
+            const data = {
+                "pass": "Kumar",
+                "type": "dept",//dept, doc
+                "userId": "webapp"
+            }
+            _services.outGetWebList(data).then(res => {
+                this.arrayData0 = res.data.data
+                /* this.arrayData0 = res.data.data[0]
+                this.arrayData1 = res.data.data[1] */
+                console.log('res1>>>>>', res.data.data[0])
+                /* console.log(res.data.data[1]) */
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+    },
+    beforeMount() {
+        this.getData()
+    },
+}
+</script>
+  
+<style>
+.card {
+    background: #ffffff30 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 10px !important;
+}
+
+.card-image {
+    border-radius: 10px 10px 0 0;
+    height: 15rem
+}
+
+.post-title {
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+/*標題*/
+.m-wrap .mjTitle .h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 0
+}
+
+.m-wrap .mjTitle .h1 i {
+    font-size: 2.5rem;
+    vertical-align: middle;
+    margin-right: .5rem
+}
+
+.m-wrap .mjTitle .sub-infor {
+    margin-bottom: 0;
+    color: #326c9e;
+    font-weight: 700;
+    line-height: 1.5
+}
+
+.m-wrap .mjTitle .btn-style {
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    margin: 0 1rem;
+    font-size: 1rem;
+    text-align: center
+}
+
+.dot_title {
+    position: relative;
+    padding: .5rem .5rem .5rem 1rem
+}
+
+.dot_title:before {
+    content: '';
+    position: absolute;
+    left: .25rem;
+    top: 1.25em;
+    width: 4px;
+    height: 4px;
+    margin-top: -.2em;
+    border-radius: 100%;
+    background: #447a6a
+}
+
+.dot_title.py-0:before {
+    top: .6em
+}
+
+/*麵包屑*/
+.crumb {
+    padding: 1.25rem 0 .75rem;
+    background: #f7f7f7;
+}
+
+.crumb ol,
+.crumb h2 {
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px
+}
+
+.crumb ol li {
+    display: inline-block;
+    color: #444
+}
+
+.crumb ol li.active {
+    color: #a1a1a1
+}
+
+.crumb ol li:not(:last-child):after {
+    content: "/";
+    margin: 0 5px;
+    color: #444
+}
+
+.crumb+.container {
+    margin-top: 2rem
+}
+
+/*我要掛號-按鈕*/
+.register-btn {
+    position: fixed;
+    right: 1em;
+    bottom: 5em;
+    z-index: 999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #2F7E20;
+    box-shadow: 0 5px 5px #c9c9c9;
+    display: none
+}
+
+.register-btn:hover {
+    background: #e4bb4f
+}
+
+.register-btn a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none
+}
+
+.register-btn .photo {
+    width: 30px;
+    margin: 0 auto
+}
+
+.register-btn h3 {
+    font-size: .85em;
+    color: #fff;
+    margin-top: .3em
+}
+
+.register-btn img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(500%);
+    -webkit-filter: brightness(500%)
+}
+
+.register>article {
+    margin-bottom: 2rem
+}
+
+.register .list+.list {
+    margin-top: 2rem
+}
+
+.register .content-body .list+.list {
+    margin-top: .5em;
+    padding-top: .5em;
+    border-top: dotted 1px #ddd
+}
+
+.register .list h3,
+.doctor-list .class-name {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    position: relative
+}
+
+.register .list-body .list h3,
+.doctor-list .class-name {
+    min-width: 150px;
+    display: inline-block;
+    padding: .5rem 2rem .25rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border-radius: .5rem .5rem 0 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.register .list-body .list h3 .btn-i {
+    display: none
+}
+
+.register .list .content {
+    position: relative;
+    padding: 1rem 2rem;
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    background: #fff
+}
+
+.register .list ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0
+}
+
+.register .list ul:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.register .list ul li {
+    display: inline-block;
+    float: left;
+    width: calc(100% / 5);
+}
+
+.register .list ul li:nth-child(5n+1) {
+    clear: both
+}
+
+.register .list ul li a {
+    display: block;
+    color: #444;
+    font-size: 1.25rem;
+    border-radius: 3px;
+}
+
+.register .list ul li a:hover {
+    font-weight: 700;
+    color: #ffffff;
+    background: #326c9e;
+}
+
+.register .calender table {
+    width: 100%
+}
+
+.register .calender .register-table+.register-table {
+    margin-top: 2em
+}
+
+.register .calender table tr {
+    border-bottom: solid thin #ddd
+}
+
+.register .calender table tr:nth-child(even) {
+    background: #eef5f3
+}
+
+.register .calender table td {
+    padding: .5em;
+    text-align: center;
+    position: relative
+}
+
+.register .calender table td:first-child {
+    width: 110px;
+}
+
+.register .calender table td {
+    border-right: solid thin #ddd;
+    width: calc((100% - 110px) / 6);
+}
+
+.register .calender table ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0
+}
+
+.register .calender table li {
+    line-height: normal
+}
+
+.register .calender table li[class] a {
+    color: #444
+}
+
+.register .calender table li[class] a:hover {
+    background: transparent;
+    color: initial;
+    cursor: default
+}
+
+.register .calender table li[class] a:after {
+    display: inline-block;
+    color: #e25d95;
+    border: solid thin;
+    border-radius: 6px;
+    font-size: .85em;
+    font-weight: 700;
+    margin-left: .2em;
+    padding: 2px
+}
+
+table .late a:after {
+    content: '已過時段'
+}
+
+table .full a:after {
+    content: '額滿'
+}
+
+table .replace a:after {
+    content: '代診'
+}
+
+table .stop a:after {
+    content: '休診'
+}
+
+.web_en table .late a:after {
+    content: 'Session ended'
+}
+
+.web_en table .full a:after {
+    content: 'No more appointments available'
+}
+
+.web_en table .replace a:after {
+    content: 'Substitute physician'
+}
+
+.web_en table .stop a:after {
+    content: 'Not available'
+}
+
+.register .calender table li a {
+    text-decoration: none;
+    padding: .5em;
+    display: block;
+    color: #447A6A;
+    line-height: 1.2rem;
+}
+
+.register .calender table li a:hover {
+    background: rgba(0, 0, 0, 0.05)
+}
+
+.register .calender table li span {
+    font-size: 13px;
+    color: #ff67a6;
+    margin-left: 2px
+}
+
+.register .calender table thead {
+    cursor: pointer;
+    background: #447A6A;
+    /*position:sticky;top:95px*/
+}
+
+.register .calender table thead td {
+    color: #fff;
+    width: calc((100% - 110px) / 6);
+}
+
+.register .calender table thead td span {
+    display: block
+}
+
+.register .calender table .linkInfo {
+    position: relative;
+    font-size: 1rem;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}
+
+.register .calender table .linkNum {
+    display: inline-block;
+    margin-left: 0;
+    font-size: .9rem;
+    color: #447A6A;
+}
+
+.register .calender .register-table:not(:first-child) tbody {
+    display: none
+}
+
+.register .calender .register-table+.register-table {
+    margin-top: 2em
+}
+
+.register .calender thead i {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    font-size: 2.4rem;
+    -o-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+.register .calender .open i {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.register .calender thead:hover i {
+    color: #fff
+}
+
+.tooltip {
+    opacity: 1 !important
+}
+
+.tooltip-inner {
+    max-width: 500px;
+    text-align: left;
+    background: #eee;
+    color: #000;
+    border: solid thin #ccc;
+    border-left: solid 3px #447A6A;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    line-height: 1.8;
+    padding: .7em 1.5em;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .2);
+    font-size: 1rem
+}
+
+.tooltip .arrow:before {
+    border-right-color: #447A6A !important;
+    -webkit-filter: drop-shadow(0 2px 2px #333);
+    z-index: -1
+}
+
+.register .calender--day7 table td,
+.register .calender--day7 table thead td {
+    width: calc((100% - 110px) / 7);
+}
+
+/*手機版 - 掛號底層*/
+.btn-circle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #447A6A;
+    color: #fff;
+    border: solid 1px #447A6A;
+    border-radius: 100%;
+    text-align: center
+}
+
+.btn-circle:hover {
+    background: #f39118;
+    border-color: #f39118
+}
+
+.calender_mb .clinic_overview {
+    background: #fff
+}
+
+.calender_mb .clinic_top {
+    position: relative;
+    margin-bottom: 0;
+    padding: 1rem;
+    background: #f1f1f1
+}
+
+.calender_mb .clinic_top .btn-circle {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.calender_mb .clinic_top .left {
+    left: 1rem
+}
+
+.calender_mb .clinic_top .right {
+    right: 1rem
+}
+
+.calender_mb .btn-circle i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.calender_mb .btn-circle.left i {
+    margin-left: -2px
+}
+
+.calender_mb .btn-circle.right i {
+    margin-left: 2px
+}
+
+.calender_mb .clinic_top .top_title {
+    margin-bottom: 0;
+    padding: .75rem 55px;
+    text-align: center
+}
+
+.calender_mb .clinic_body {
+    position: relative;
+    padding: 1rem;
+    background: #fff
+}
+
+.calender_mb .clinic_infor {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.calender_mb .clinic_infor li+li {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: dotted 1px #ddd
+}
+
+.calender_mb .clinic_infor .item {
+    float: left
+}
+
+.calender_mb .clinic_infor .item:last-child {
+    margin-top: .5rem
+}
+
+.calender_mb .clinic_infor .doctor-name {
+    font-size: 1.25rem;
+    color: #4383b1
+}
+
+.calender_mb .clinic_infor .doctor-name .linkNum {
+    display: inline-block;
+    margin-left: .5rem;
+    font-size: .9rem;
+    color: #4383b1;
+}
+
+.calender_mb .week-group {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    clear: both;
+    overflow: hidden
+}
+
+.calender_mb .week-group li {
+    float: left;
+    width: calc(100% / 6);
+    padding: .5rem .25rem .25rem
+}
+
+.calender_mb .week-group li+li {
+    border-left: dotted 1px #ddd
+}
+
+.clinic_date {
+    padding-bottom: .75rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border-bottom: dotted 1px #ddd
+}
+
+.period-group .disabled {
+    opacity: .1
+}
+
+.period-group .custom-control {
+    text-align: center;
+    padding: .5rem 0;
+    height: 60px
+}
+
+.period-group .custom-control-label {
+    z-index: 1;
+    padding: .5rem;
+    color: #212529
+}
+
+.period-group .custom-control-label::before {
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem
+}
+
+.period-group .custom-control-label::after {
+    display: none
+}
+
+.period-group .custom-control-label::before {
+    border-color: #f1f1f1;
+    background: #f1f1f1
+}
+
+.period-group .yellow input[type="radio"]:checked+label span,
+.period-group .yellow input[type="checkbox"]:checked+label span,
+.period-group .yellow .custom-control-input:checked~.custom-control-label::before,
+.period-group .yellow.on .custom-control-input~.custom-control-label::before {
+    background: #f4f0c2;
+    border-color: #f4f0c2
+}
+
+.period-group .blue input[type="radio"]:checked+label span,
+.period-group .blue input[type="checkbox"]:checked+label span,
+.period-group .blue .custom-control-input:checked~.custom-control-label::before,
+.period-group .blue.on .custom-control-input~.custom-control-label::before {
+    background: #b8daf4;
+    border-color: #b8daf4
+}
+
+.period-group .red input[type="radio"]:checked+label span,
+.period-group .red input[type="checkbox"]:checked+label span,
+.period-group .red .custom-control-input:checked~.custom-control-label::before,
+.period-group .red.on .custom-control-input~.custom-control-label::before {
+    background: #f4caca;
+    border-color: #f4caca
+}
+
+.calender_mb .clinic_single {
+    position: relative;
+    padding: 0 1rem 1rem;
+    background: #eee
+}
+
+.calender_mb .clinic_single:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background: #fff
+}
+
+.calender_mb .clinic_single .clinic_top {
+    border-radius: .5rem .5rem 0 0;
+    background: #447a6a;
+    color: #fff;
+    box-shadow: 0 10px 11px rgba(0, 0, 0, 0.4);
+    font-size: 18px
+}
+
+/*掛號資料*/
+.register .login {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #f2f2f2;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    background: #fff
+}
+
+.register .login.w-100 {
+    max-width: none
+}
+
+.register .login .item ul,
+.register .login .item p {
+    padding-left: 40px;
+    list-style: none;
+    margin: 0
+}
+
+.register .login .item ul li {
+    display: inline-block;
+    line-height: normal;
+    padding: .5rem .5rem .5rem 1.5rem
+}
+
+.register .login .item ul li:not(:last-child) {
+    margin-right: 1rem
+}
+
+.register .two-group {
+    margin: auto
+}
+
+.register .modify {
+    padding-top: 2rem
+}
+
+.register .modify article {
+    margin-bottom: 2rem
+}
+
+.register .modify .modify-info {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+.register .modify .modify-info:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.register .modify .item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% / 2);
+    border-bottom: dashed thin #dcdcdc;
+    padding: 1rem .5rem 0;
+    min-height: 81px;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.register .modify .item.large {
+    width: 100%
+}
+
+.register .modify .item label {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    min-width: 100px
+}
+
+.register .modify .item input:not([type="checkbox"]),
+.register .modify .item select {
+    border: 0;
+    min-width: 120px;
+    width: calc(100% - 117px);
+    height: 44px;
+    border: solid thin #ddd;
+    padding: 0 .5em;
+    outline: none;
+    border-radius: 3px;
+}
+
+.register .modify .item select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 1.5em
+}
+
+.register .modify .item select::-ms-expand {
+    display: none
+}
+
+.register .modify .item .select {
+    display: inline-block;
+    position: relative
+}
+
+.register .modify .item .gp>* {
+    margin-top: .25rem
+}
+
+.register .modify .item .gp>*+* {
+    margin-left: .25rem
+}
+
+.register .modify .item .same {
+    width: 100%;
+    margin-bottom: 1em;
+    color: #447a6a;
+    font-weight: 700
+}
+
+.register .modify .item .same label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.register .modify .item .same+.gp {
+    width: 100%
+}
+
+.register .modify .custom-group {
+    list-style: none;
+    width: 440px;
+    margin: 0;
+    padding: 0 0 0 .25rem;
+}
+
+.register .modify .custom-group li {
+    display: inline-block;
+}
+
+.register .modify .item .custom-group+input {
+    width: calc(100% - 440px);
+}
+
+.register .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0
+}
+
+.register .signup {
+    border-top: solid thin #ddd;
+    margin-top: 2rem;
+    padding-top: 2rem
+}
+
+.register .signup button {
+    display: block;
+    width: 200px;
+    margin: 0 auto
+}
+
+.register-table table {
+    width: 100%;
+    border-left: solid thin #ddd;
+    border-top: solid thin #ddd
+}
+
+.register-table table tr:nth-child(even) {
+    background: #eef5f3
+}
+
+.register-table table td {
+    padding: 1rem .5rem;
+    text-align: center;
+    border-right: solid thin #ddd;
+    border-bottom: solid thin #ddd
+}
+
+.register-table table td button[disabled] {
+    background: transparent;
+    border-color: transparent;
+    color: #444;
+    font-weight: 400;
+    cursor: default
+}
+
+.register-table table thead {
+    background: #447A6A;
+    color: #fff
+}
+
+.register-table table thead td {
+    border: 0
+}
+
+.register-table .txt-big {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.register-table .txt-big.blue {
+    font-size: 2rem;
+    color: #326c9e
+}
+
+.remedy-tips {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+    text-align: center
+}
+
+.remedy-tips .weeks-title {
+    padding: 0 .5rem;
+    background: #447A6A;
+    color: #fff;
+    margin-bottom: .5rem;
+    padding: .25rem .5rem;
+    border-radius: .5rem
+}
+
+.remedy-tips p {
+    margin-bottom: 0
+}
+
+.register .block+.block {
+    margin-top: 2rem
+}
+
+.register .block h3 {
+    font-size: 1.6rem;
+    color: #447A6A
+}
+
+.block .login.line {
+    padding: 0;
+    border: 0;
+    background: transparent
+}
+
+.register .block.remedyok h3 {
+    color: #a4977b
+}
+
+.register .block.remedyok table thead {
+    background: #a4977b
+}
+
+.dose_login {
+    border: solid 1px #447A6A;
+    border-radius: .75rem;
+    padding: 0 .5rem .5rem;
+    overflow: hidden;
+}
+
+.dose_login mark {
+    display: inline-block;
+    margin-left: -.5rem;
+    margin-bottom: .5rem;
+    padding: 2px .5rem;
+    background: #447A6A;
+    color: #fff;
+    border-radius: 0 0 .5rem 0;
+}
+
+/* color-css */
+.doctor-list .tabs .owl-item:nth-child(1) li,
+.doctor-list .tabs .owl-item:nth-child(11) li,
+.doctor-list .tabs .owl-item:nth-child(21) li,
+.register .list-body .list:nth-child(1) h3,
+.register .list-body .list:nth-child(11) h3,
+.register .list-body .list:nth-child(21) h3,
+.doctor-list .list-box:nth-child(1) .class-name,
+.doctor-list .list-box:nth-child(11) .class-name,
+.doctor-list .list-box:nth-child(21) .class-name {
+    background: #D5F2E8;
+}
+
+.doctor-list .tabs .owl-item:nth-child(2) li,
+.doctor-list .tabs .owl-item:nth-child(12) li,
+.doctor-list .tabs .owl-item:nth-child(22) li,
+.register .list-body .list:nth-child(2) h3,
+.register .list-body .list:nth-child(12) h3,
+.register .list-body .list:nth-child(22) h3,
+.doctor-list .list-box:nth-child(2) .class-name,
+.doctor-list .list-box:nth-child(12) .class-name,
+.doctor-list .list-box:nth-child(22) .class-name {
+    background: #f9efd9;
+}
+
+.doctor-list .tabs .owl-item:nth-child(3) li,
+.doctor-list .tabs .owl-item:nth-child(13) li,
+.doctor-list .tabs .owl-item:nth-child(23) li,
+.register .list-body .list:nth-child(3) h3,
+.register .list-body .list:nth-child(13) h3,
+.register .list-body .list:nth-child(23) h3,
+.doctor-list .list-box:nth-child(3) .class-name,
+.doctor-list .list-box:nth-child(13) .class-name,
+.doctor-list .list-box:nth-child(23) .class-name {
+    background: #f3d4d4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(4) li,
+.doctor-list .tabs .owl-item:nth-child(14) li,
+.doctor-list .tabs .owl-item:nth-child(24) li,
+.register .list-body .list:nth-child(4) h3,
+.register .list-body .list:nth-child(14) h3,
+.register .list-body .list:nth-child(24) h3,
+.doctor-list .list-box:nth-child(4) .class-name,
+.doctor-list .list-box:nth-child(14) .class-name,
+.doctor-list .list-box:nth-child(24) .class-name {
+    background: #BCB5E2;
+}
+
+.doctor-list .tabs .owl-item:nth-child(5) li,
+.doctor-list .tabs .owl-item:nth-child(15) li,
+.doctor-list .tabs .owl-item:nth-child(25) li,
+.register .list-body .list:nth-child(5) h3,
+.register .list-body .list:nth-child(15) h3,
+.register .list-body .list:nth-child(25) h3,
+.doctor-list .list-box:nth-child(5) .class-name,
+.doctor-list .list-box:nth-child(15) .class-name,
+.doctor-list .list-box:nth-child(25) .class-name {
+    background: #fbf2ac;
+}
+
+.doctor-list .tabs .owl-item:nth-child(6) li,
+.doctor-list .tabs .owl-item:nth-child(16) li,
+.doctor-list .tabs .owl-item:nth-child(26) li,
+.register .list-body .list:nth-child(6) h3,
+.register .list-body .list:nth-child(16) h3,
+.register .list-body .list:nth-child(26) h3,
+.doctor-list .list-box:nth-child(6) .class-name,
+.doctor-list .list-box:nth-child(16) .class-name,
+.doctor-list .list-box:nth-child(26) .class-name {
+    background: #d6ecc4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(7) li,
+.doctor-list .tabs .owl-item:nth-child(17) li,
+.doctor-list .tabs .owl-item:nth-child(27) li,
+.register .list-body .list:nth-child(7) h3,
+.register .list-body .list:nth-child(17) h3,
+.register .list-body .list:nth-child(27) h3,
+.doctor-list .list-box:nth-child(7) .class-name,
+.doctor-list .list-box:nth-child(17) .class-name,
+.doctor-list .list-box:nth-child(27) .class-name {
+    background: #fbe6c4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(8) li,
+.doctor-list .tabs .owl-item:nth-child(18) li,
+.doctor-list .tabs .owl-item:nth-child(28) li,
+.register .list-body .list:nth-child(8) h3,
+.register .list-body .list:nth-child(18) h3,
+.register .list-body .list:nth-child(28) h3,
+.doctor-list .list-box:nth-child(8) .class-name,
+.doctor-list .list-box:nth-child(18) .class-name,
+.doctor-list .list-box:nth-child(28) .class-name {
+    background: #e3d1f1;
+}
+
+.doctor-list .tabs .owl-item:nth-child(9) li,
+.doctor-list .tabs .owl-item:nth-child(19) li,
+.doctor-list .tabs .owl-item:nth-child(29) li,
+.register .list-body .list:nth-child(9) h3,
+.register .list-body .list:nth-child(19) h3,
+.register .list-body .list:nth-child(29) h3,
+.doctor-list .list-box:nth-child(9) .class-name,
+.doctor-list .list-box:nth-child(19) .class-name,
+.doctor-list .list-box:nth-child(29) .class-name {
+    background: #c7dff9;
+}
+
+.doctor-list .tabs .owl-item:nth-child(10) li,
+.doctor-list .tabs .owl-item:nth-child(20) li,
+.doctor-list .tabs .owl-item:nth-child(30) li,
+.register .list-body .list:nth-child(10) h3,
+.register .list-body .list:nth-child(20) h3,
+.register .list-body .list:nth-child(30) h3,
+.doctor-list .list-box:nth-child(10) .class-name,
+.doctor-list .list-box:nth-child(20) .class-name,
+.doctor-list .list-box:nth-child(30) .class-name {
+    background: #f5cfdf;
+}
+
+.doctor-list .list-box:nth-child(1) .content,
+.doctor-list .list-box:nth-child(11) .content,
+.doctor-list .list-box:nth-child(21) .content,
+.register .list-body .list:nth-child(1) .content,
+.register .list-body .list:nth-child(11) .content,
+.register .list-body .list:nth-child(21) .content {
+    border-top-color: #D5F2E8;
+}
+
+.doctor-list .list-box:nth-child(2) .content,
+.doctor-list .list-box:nth-child(12) .content,
+.doctor-list .list-box:nth-child(22) .content,
+.register .list-body .list:nth-child(2) .content,
+.register .list-body .list:nth-child(12) .content,
+.register .list-body .list:nth-child(22) .content {
+    border-top-color: #f9efd9;
+}
+
+.doctor-list .list-box:nth-child(3) .content,
+.doctor-list .list-box:nth-child(13) .content,
+.doctor-list .list-box:nth-child(23) .content,
+.register .list-body .list:nth-child(3) .content,
+.register .list-body .list:nth-child(13) .content,
+.register .list-body .list:nth-child(23) .content {
+    border-top-color: #f3d4d4;
+}
+
+.doctor-list .list-box:nth-child(4) .content,
+.doctor-list .list-box:nth-child(14) .content,
+.doctor-list .list-box:nth-child(24) .content,
+.register .list-body .list:nth-child(4) .content,
+.register .list-body .list:nth-child(14) .content,
+.register .list-body .list:nth-child(24) .content {
+    border-top-color: #BCB5E2;
+}
+
+.doctor-list .list-box:nth-child(5) .content,
+.doctor-list .list-box:nth-child(15) .content,
+.doctor-list .list-box:nth-child(25) .content,
+.register .list-body .list:nth-child(5) .content,
+.register .list-body .list:nth-child(15) .content,
+.register .list-body .list:nth-child(25) .content {
+    border-top-color: #fbf2ac;
+}
+
+.doctor-list .list-box:nth-child(6) .content,
+.doctor-list .list-box:nth-child(16) .content,
+.doctor-list .list-box:nth-child(26) .content,
+.register .list-body .list:nth-child(6) .content,
+.register .list-body .list:nth-child(16) .content,
+.register .list-body .list:nth-child(26) .content {
+    border-top-color: #d6ecc4;
+}
+
+.doctor-list .list-box:nth-child(7) .content,
+.doctor-list .list-box:nth-child(17) .content,
+.doctor-list .list-box:nth-child(27) .content,
+.register .list-body .list:nth-child(7) .content,
+.register .list-body .list:nth-child(17) .content,
+.register .list-body .list:nth-child(27) .content {
+    border-top-color: #fbe6c4;
+}
+
+.doctor-list .list-box:nth-child(8) .content,
+.doctor-list .list-box:nth-child(18) .content,
+.doctor-list .list-box:nth-child(28) .content,
+.register .list-body .list:nth-child(8) .content,
+.register .list-body .list:nth-child(18) .content,
+.register .list-body .list:nth-child(28) .content {
+    border-top-color: #e3d1f1;
+}
+
+.doctor-list .list-box:nth-child(9) .content,
+.doctor-list .list-box:nth-child(19) .content,
+.doctor-list .list-box:nth-child(29) .content,
+.register .list-body .list:nth-child(9) .content,
+.register .list-body .list:nth-child(19) .content,
+.register .list-body .list:nth-child(29) .content {
+    border-top-color: #c7dff9;
+}
+
+.doctor-list .list-box:nth-child(10) .content,
+.doctor-list .list-box:nth-child(20) .content,
+.doctor-list .list-box:nth-child(30) .content,
+.register .list-body .list:nth-child(10) .content,
+.register .list-body .list:nth-child(20) .content,
+.register .list-body .list:nth-child(30) .content {
+    border-top-color: #f5cfdf;
+}
+
+.doctor-list .content-body .content,
+.register .list-body .list .content {
+    border-top: solid 5px;
+}
+
+.mobile-accord {
+    display: none;
+}
+
+.register .list ul li a {
+    text-decoration: none;
+}
+
+.content ul{display:flex !important;}
+.register .list ul li a{
+    /* white-space: nowrap; */
+    padding: 0;
+}
+.content li a:before {
+    display: none;
+}
+</style>

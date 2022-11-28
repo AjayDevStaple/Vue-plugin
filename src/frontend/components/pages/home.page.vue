@@ -40,19 +40,5 @@ export default {
 </script>
 
 <style>
-.card {
-  background: #ffffff30 !important;
-  backdrop-filter: blur(10px);
-  border-radius: 10px !important;
-}
 
-.card-image {
-  border-radius: 10px 10px 0 0;
-  height: 15rem
-}
-
-.post-title {
-  font-family: sans-serif;
-  font-size: 60px;
-}
 </style>
