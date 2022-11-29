@@ -1,23 +1,17 @@
 <template>
-    <div class="col-12">
-        <h1 class="post-title">registration</h1>
-    </div>
-
-
-
-    <!-- <ul v-for="(value, index) in arrayData0" :key="index">
-        <li> {{ value.color }}</li>
-    </ul>
-
-
-    <p>
-        Once upone a time...
-        <button @click="showMore = true">Read more</button>
-    </p>
-    <p v-show="showMore">...in Vueland!</p> -->
-
-
-
+    <div class="title2">
+        <h1 class="mjTitle">
+         Section registration
+          <div class="note-group">
+            <p class="note">
+                 . Children's vaccines are open for appointments and children
+                  are encouraged to be vaccinated. Please click on the type of
+                  vaccine you want to administer and register at the Pediatric
+                  Vaccination Clinic.
+            </p>
+          </div>
+        </h1>
+      </div>
 
     <div class="mobile-accord">
         <Accordion>
@@ -46,11 +40,9 @@
                 <div class="content" >
                     <ul >
                         <li v-for="(abcdata, index) in value.deptList">
-                            <a href="https://www-pohai-org-tw.translate.goog/register_detail.php?deptSysCode=A05&amp;deptCode=A0504&amp;deptChName=%E6%96%B0%E5%86%A0%E7%96%AB%E8%8B%97%E6%8E%A5%E7%A8%AE%EF%BC%9ABNT&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                            <a :href="`${url}#/subservice?deptSysCode=${value.deptSysCode}&deptCode=${value.deptSys}`"
                                 class="dot_title" title="COVID-19 Vaccination: BNT">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">{{ abcdata.deptName }}</font>
-                                </font>
+                                   {{ abcdata.deptName }}
                             </a>
                         </li>
                     </ul>
@@ -576,11 +568,15 @@ export default {
         return {
             arrayData0: null,
             arrayData1: null,
-            showMore: false
+            showMore: false,
+            url: null,
         }
     },
     methods: {
         getData() {
+            var currentUrlorigin = window.location.origin; //http://localhost:8080
+            var currentUrl = window.location.pathname; ///wordpresswithvue/sample-page/
+            console.log(`Current URL => ${currentUrlorigin+currentUrl}`);
             const data = {
                 "pass": "Kumar",
                 "type": "dept",//dept, doc
@@ -588,6 +584,7 @@ export default {
             }
             _services.outGetWebList(data).then(res => {
                 this.arrayData0 = res.data.data
+                this.url = currentUrlorigin+currentUrl;
                 /* this.arrayData0 = res.data.data[0]
                 this.arrayData1 = res.data.data[1] */
                 console.log('res1>>>>>', res.data.data[0])
@@ -595,6 +592,7 @@ export default {
             }).catch(err => {
                 console.log(err)
             })
+            
         }
     },
     beforeMount() {
@@ -616,7 +614,6 @@ export default {
 }
 
 .post-title {
-    font-family: sans-serif;
     font-size: 60px;
 }
 
@@ -1008,7 +1005,6 @@ table .stop a:after {
     color: #000;
     border: solid thin #ccc;
     border-left: solid 3px #447A6A;
-    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
     line-height: 1.8;
     padding: .7em 1.5em;
     box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .2);
@@ -1743,5 +1739,34 @@ table .stop a:after {
 }
 .content li a:before {
     display: none;
+}
+
+.title2 .mjTitle {
+  display: block;
+  padding: 1.5rem 0 4.2rem;
+  margin: 2rem 0; 
+  border-top: solid thin #ddd;
+  border-bottom: solid thin #ddd;
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.title2 .mjTitle:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #447A6A;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.mjTitle .note-group {
+    float: right;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 1rem;
+    vertical-align: top;
+    font-size: 1rem;    
 }
 </style>

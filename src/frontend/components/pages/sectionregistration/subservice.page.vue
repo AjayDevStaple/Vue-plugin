@@ -1,7 +1,4 @@
 <template>
-    <div class="col-12">
-        <h1 class="post-title">Sub Service</h1>
-    </div>
     <div class="register">
         <div class="container sub-service">
             <hr>
@@ -179,7 +176,9 @@ import { _services } from './../../../../Services/Api/index'
 
 export default {
     name: 'HomePage',
-    components: {},
+    components: {
+        navigation
+    },
     data() {
         return {
             arrayData0: null,
@@ -211,6 +210,7 @@ export default {
             }
             _services.outGetWebSchebasic(data).then(res => {
                 this.arrayData0 = res.data.data
+                console.log(this.$route.query.abc)
                 /* this.arrayData0 = res.data.data[0]
                 this.arrayData1 = res.data.data[1] */
                 console.log('res1>>>>>', res.data.data)
@@ -252,7 +252,6 @@ export default {
 }
 
 .post-title {
-    font-family: sans-serif;
     font-size: 60px;
 }
 

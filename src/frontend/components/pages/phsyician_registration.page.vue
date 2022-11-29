@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-regs">
+  <div class="p-regs">
     <article class="d-none d-lg-block"></article>
     <div class="register">
       <div class="title2">
@@ -164,17 +164,15 @@ export default {
 </script>
 
 <style>
-.p-regs {
-  margin-top: 200px;
-}
-
-
 .register .list ul li {
   display: inline-block;
   float: left;
   width: calc(100% / 5);
+  
 }
-
+.register .list ul {
+ 
+}
 .two-group .info {
   background: linear-gradient(135deg, #eef5f3 0%, rgba(238, 245, 243, 0.8) 100%),
     url(../../assets/sidebar-bg.png) left top/cover;
@@ -197,6 +195,11 @@ export default {
   align-items: center;
   justify-content: center;
   border: solid 1px #ddd;
+}
+.entry-content ol:not([class*=wp-]) li, .entry-content ul:not([class*=wp-]) li {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    list-style-type: none;
 }
 .tabs.owl-theme .owl-prev {
   right: 100%;
@@ -224,7 +227,7 @@ export default {
 }
 .doctor-list .tabs li a {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0 !important;
   padding: 0.5rem 1.5rem;
   /*background: rgba(255, 255, 255, 0.6);*/
   text-decoration: none;
@@ -484,11 +487,14 @@ export default {
 .doctor-list {
   margin: 2rem 0;
 }
+.doctor-list > ul {
+  margin: 0 !important;
+}
 
 .p-regs .title2 .mjTitle {
   display: block;
   padding: 1.5rem 0 4.2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   border-top: solid thin #ddd;
   border-bottom: solid thin #ddd;
   position: relative;

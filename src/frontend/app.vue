@@ -1,22 +1,16 @@
 <template>
   <div id="vue-frontend-app">
-
-  
-    
     <router-view></router-view>
-  
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import Navbar from "./component/Navbar.vue";
-import Footer from "./component/Footer.vue";
 
 
 export default defineComponent({
   name: 'App',
-  components: {Navbar, Footer}
+  components: {}
 })
 </script>
 
