@@ -93,20 +93,19 @@
             <div style="display : flex; flex-wrap: wrap" class="content" v-for="(value, index) in fulldata" >
               <div class="list" v-for="(abcdata, index) in fulldata[index].deptList">
                 <h3 >
-                 <font style="vertical-align: inherit; flex-direction: row "
-                      > {{abcdata.deptName}}</font
-                    
-                  >
+                  <a :href="`${url}#/subservice`"
+                                class="dot_title" title="COVID-19 Vaccination: BNT"><font style="vertical-align: inherit"
+                        >
+                 <font style="vertical-align: inherit; flex-direction: row">{{abcdata.deptName}}</font>
+                 </font>
+                 </a>
                 </h3>
                 <ul>
                   <li v-for="(efgdata , index) in abcdata.docList ">
-                    <a
-                      href="https://www-pohai-org-tw.translate.goog/register_doctor_detail.php?deptSysCode=A08&amp;deptCode=A0801&amp;deptChName=%E5%AE%89%E5%AF%A7%E7%B7%A9%E5%92%8C%E9%86%AB%E7%99%82%E9%96%80%E8%A8%BA&amp;docName=%E6%9E%97%E7%85%8C%E4%BB%81&amp;docCode=1A36&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
-                      class="dot_title"
-                      title="Lin Huangren"
-                      ><font style="vertical-align: inherit"
+                    <a :href="`${url}#/subservice`"
+                                class="dot_title" title="COVID-19 Vaccination: BNT"><font style="vertical-align: inherit"
                         ><font style="vertical-align: inherit"
-                          >{{efgdata.docName}}</font
+                          >{{efgdata.docName}} 123455555555</font
                         ></font
                       ></a
                     >
@@ -133,10 +132,13 @@ export default {
       arrayData0: null,
       arrayData1: null,
       fulldata: null,
+      url: null,
     };
   },
   methods: {
     getData() {
+      var currentUrlorigin = window.location.origin; //http://localhost:8080
+      var currentUrl = window.location.pathname; ///wordpresswithvue/sample-page/
       const data = {
 
         pass: "Kumar",
@@ -148,6 +150,7 @@ export default {
         .then((res) => {
           this.arrayData0 = res.data.data[0];
           this.arrayData1 = res.data.data[1];
+          this.url = currentUrlorigin+currentUrl;
           console.log(res.data.data);
           this.fulldata = res.data.data;
          

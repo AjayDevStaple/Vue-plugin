@@ -37,10 +37,10 @@ class Frontend
         wp_register_style('wp-vue-primetheme', 'https://unpkg.com/primevue/resources/themes/mdc-light-indigo/theme.css');
         wp_enqueue_style('wp-vue-primetheme');
 
-        wp_register_style('wp-vue-frontend', WP_VUE_PLUGIN_URL . 'public/css/frontend.css');
+        wp_register_style('wp-vue-frontend', WP_VUE_PLUGIN_URL . 'includes/frontend.css');
         wp_enqueue_style('wp-vue-frontend');
 
-        wp_register_script( 'my_child_script',WP_VUE_PLUGIN_URL . 'public/js/nav.js', [], rand(), true );
+        wp_register_script( 'my_child_script',WP_VUE_PLUGIN_URL . 'includes/nav.js', [], rand(), true );
         wp_enqueue_script('my_child_script');
 
         wp_localize_script('wp-vue-frontend', 'wpFrontendLocalizer', [
@@ -73,13 +73,13 @@ class Frontend
                                         <a class="nav-link" href="#">See clinic number query</a>
                                     </li>
                                     <li class="cstm-url nav-item">
-                                        <a class="nav-link" href="#">Inquiry and Cancellation</a>
+                                        <a class="nav-link" href="'.$actual_link.'#/inquiry_cancellation">Inquiry and Cancellation</a>
                                     </li>
                                     <li class="cstm-url nav-item">
-                                        <a class="nav-link" href="#">Stop consultation query</a>
+                                        <a class="nav-link"href="'.$actual_link.'#/stop_consultation_query">Stop consultation query</a>
                                     </li>
                                     <li class="cstm-url nav-item">
-                                        <a class="nav-link" href="#">Make an appointment to pick up medicine</a>
+                                        <a class="nav-link" href="'.$actual_link.'#/register_remedy">Make an appointment to pick up medicine</a>
                                     </li>
                                 </ul>
                             </div>
