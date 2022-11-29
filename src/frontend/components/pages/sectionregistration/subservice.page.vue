@@ -228,8 +228,8 @@ export default {
                 console.log(err)
             })
         },
-
-        redirect(index) {
+    },
+    redirect(index) {
             
             console.log(this.arrayData0?.[index])
             const data =  {
@@ -240,8 +240,6 @@ export default {
             params: data ,   
         }) 
         },
-
-
         createConversation: function (id) {
             var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             var d = new Date(id);
