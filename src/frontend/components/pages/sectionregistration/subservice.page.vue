@@ -1,7 +1,4 @@
 <template>
-    <div class="col-12">
-        <h1 class="post-title">Sub Service</h1>
-    </div>
     <div class="register">
         <div class="container sub-service">
             <hr>
@@ -87,6 +84,93 @@
                 </table>
             </div>
             
+            <!-- <div class="register-table">
+                <table class="table-border-radius">
+                    <thead>
+                        <tr>
+                            <td>
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </td>
+                            <td>
+                                <h4>Wednesday</h4>
+                                <p>11/23</p>
+                            </td>
+                            <td>
+                                <h4>Thursday</h4>
+                                <p>11/24</p>
+                            </td>
+                            <td>
+                                <h4>Friday</h4>
+                                <p>11/25</p>
+                            </td>
+                            <td>
+                                <h4>Saturday</h4>
+                                <p>11/26</p>
+                            </td>
+                            <td>
+                                <h4>Sunday</h4>
+                                <p>11/27</p>
+                            </td>
+                            <td>
+                                <h4>Monday</h4>
+                                <p>11/28</p>
+                            </td>
+                            <td>
+                                <h4>Tuesday</h4>
+                                <p>11/29</p>
+                            </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    morning
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Type: BNT full dose, the fourth dose needs to be separated from the third dose by 84
+                                    days, only open to the elderly over 50 years old, the first category of personnel,
+                                    airport ports, home quarantine, airline crew/crew, institutions and social welfare
+                                    care systems Workers, residents of long-term care institutions, people over 18 years
+                                    old who are immunocompromised, and people who need to go abroad for diplomatic,
+                                    official, business negotiation and other work needs.
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Type: BNT for young children, doses 1-3 (limited to children aged 6 months to 4
+                                    years), location: pediatric clinic on the second floor
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    Type: BNT for young children, doses 1-3 (limited to children aged 6 months to 4
+                                    years), location: pediatric clinic on the second floor
+                                </p>
+                            </td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            -->
+
         </div>
     </div>
 
@@ -101,6 +185,9 @@ export default {
     components: {
         BookingPageVue
     },
+    components: {
+        navigation
+    },
     data() {
         return {
             arrayData0: [],
@@ -113,7 +200,6 @@ export default {
     },
     methods: {
         getData() {
-           
             const data = {
                 "deptCode": "woman",
                 "deptRoom": "236",
@@ -128,6 +214,11 @@ export default {
             .then(res => {
              
                 this.arrayData0 = res.data.data;
+            _services.outGetWebSchebasic(data).then(res => {
+                this.arrayData0 = res.data.data
+                console.log(this.$route.query.abc)
+                /* this.arrayData0 = res.data.data[0]
+                this.arrayData1 = res.data.data[1] */
                 console.log('res1>>>>>', res.data.data)
 
                 
@@ -184,7 +275,6 @@ export default {
 }
 
 .post-title {
-    font-family: sans-serif;
     font-size: 60px;
 }
 

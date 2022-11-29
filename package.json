@@ -18,7 +18,6 @@
     "primeflex": "^3.2.0",
     "primeicons": "^5.0.0",
     "primevue": "^3.12.6",
-    
     "vue-router": "^4.0.15",
     "vue2": "^1.0.0",
     "vuex": "^4.0.2"
@@ -30,7 +29,7 @@
     "axios": "^0.27.2",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
-    "laravel-mix": "^6.0.43",
+    "laravel-mix": "^6.0.49",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
