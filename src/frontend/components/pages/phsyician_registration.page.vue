@@ -1,0 +1,594 @@
+<template>
+  <div class="container p-regs">
+    <article class="d-none d-lg-block"></article>
+    <div class="register">
+      <div class="title2">
+        <h1 class="mjTitle">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit"
+              >Physician registration
+            </font></font
+          >
+          <div class="note-group">
+            <p class="note">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit"></font
+                ><font style="vertical-align: inherit"
+                  >Children's vaccines are open for appointments and children
+                  are encouraged to be vaccinated. Please click on the type of
+                  vaccine you want to administer and register at the Pediatric
+                  Vaccination Clinic.</font
+                ></font
+              >
+            </p>
+          </div>
+        </h1>
+        <small
+          ><font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit"
+              >※ Physicians are sorted by strokes of surnames</font
+            ></font
+          ></small
+        >
+      </div>
+      <section id="tabs" class="doctor-list">
+        <ul class="owl-carousel owl-theme tabs-nav tabs owl-loaded owl-drag">
+          <div class="owl-stage-outer">
+            <div
+              class="owl-stage"
+              style="
+                transform: translate3d(0px, 0px, 0px);
+                transition: all 0s ease 0s;
+                width: 1961px;
+              "
+            >
+
+              <!-- <li v-for="value in fulldata">{{ value.deptSys }}</li> -->
+
+              <div
+                class="owl-item active"
+                v-for="value in fulldata" :style="{'background-color': value.color}"
+              >
+                <li class="">
+                  <a
+                    href="https://www-pohai-org-tw.translate.goog/register_doctor.php?_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp#tabs-0"
+                    ><font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"> </font>
+                      {{ value.deptSys }}</font
+                    >
+                  </a>
+                </li>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="owl-nav">
+            <button type="button" role="presentation" class="owl-prev disabled">
+              <span aria-label="Previous"
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"><i class="fas fa-caret-left"></i></font></font
+              ></span></button
+            ><button type="button" role="presentation" class="owl-next">
+              <span aria-label="Next"
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"><i class="fas fa-caret-right"></i></font></font
+                ></span
+              >
+            </button>
+          </div>
+          <div class="owl-dots disabled"></div>
+        </ul>
+        <div class="content-body tab-content" >
+          
+        
+          <article class="list-box tab-pane active" id="tabs-12">
+            <h3
+              class="class-name"
+              onclick="var $ofweidht=innerWidth;if($ofweidht<=991){$(this).toggleClass('open').next().slideToggle();}"
+            >
+              
+              ><i class="fas fa-chevron-circle-down btn-i"></i>
+            </h3>
+            <div style="display : flex; flex-wrap: wrap" class="content" v-for="(value, index) in fulldata" >
+              <div class="list" v-for="(abcdata, index) in fulldata[index].deptList">
+                <h3 >
+                 <font style="vertical-align: inherit; flex-direction: row "
+                      > {{abcdata.deptName}}</font
+                    
+                  >
+                </h3>
+                <ul>
+                  <li v-for="(efgdata , index) in abcdata.docList ">
+                    <a
+                      href="https://www-pohai-org-tw.translate.goog/register_doctor_detail.php?deptSysCode=A08&amp;deptCode=A0801&amp;deptChName=%E5%AE%89%E5%AF%A7%E7%B7%A9%E5%92%8C%E9%86%AB%E7%99%82%E9%96%80%E8%A8%BA&amp;docName=%E6%9E%97%E7%85%8C%E4%BB%81&amp;docCode=1A36&amp;_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp"
+                      class="dot_title"
+                      title="Lin Huangren"
+                      ><font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >{{efgdata.docName}}</font
+                        ></font
+                      ></a
+                    >
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+    <article class="d-block d-lg-none"></article>
+  </div>
+</template>
+
+<script>
+import { _services } from "./../../../Services/Api/index";
+export default {
+  name: "HomePage",
+  components: {},
+  data() {
+    return {
+      arrayData0: null,
+      arrayData1: null,
+      fulldata: null,
+    };
+  },
+  methods: {
+    getData() {
+      const data = {
+
+        pass: "Kumar",
+        type: "dept",
+        userId: "webapp",
+      };
+      _services
+        .outGetWebList(data)
+        .then((res) => {
+          this.arrayData0 = res.data.data[0];
+          this.arrayData1 = res.data.data[1];
+          console.log(res.data.data);
+          this.fulldata = res.data.data;
+         
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
+  beforeMount() {
+    this.getData();
+  },
+};
+</script>
+
+<style>
+.p-regs {
+  margin-top: 200px;
+}
+
+
+.register .list ul li {
+  display: inline-block;
+  float: left;
+  width: calc(100% / 5);
+}
+
+.two-group .info {
+  background: linear-gradient(135deg, #eef5f3 0%, rgba(238, 245, 243, 0.8) 100%),
+    url(../../assets/sidebar-bg.png) left top/cover;
+  border-radius: 1rem 0 0 1rem;
+}
+
+
+/*依醫生掛號*/
+
+.tabs.owl-theme .owl-nav [class*="owl-"] {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  margin: -0.25rem 0.5rem 0;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #ddd;
+}
+.tabs.owl-theme .owl-prev {
+  right: 100%;
+}
+.tabs.owl-theme .owl-next {
+  left: 100%;
+}
+.tabs.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #447a6a;
+}
+.doctor-list .tabs {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  margin-bottom: 0;
+}
+
+.doctor-list .tabs li[class$="active"] a,
+.doctor-list .tabs li[class$="hover"] a {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 0.75rem;
+  background: transparent;
+  box-shadow: 0 15px 15px 1px rgba(0, 0, 0, 0.5);
+}
+.doctor-list .tabs li a {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  /*background: rgba(255, 255, 255, 0.6);*/
+  text-decoration: none;
+  position: relative;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem 0.5rem 0 0;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.doctor-list .list {
+  display: flex;
+  align-items: center;
+}
+.doctor-list .content {
+  display: none;
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  border: solid 1px #f0f0f0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+.doctor-list .content h3 {
+  background: transparent;
+  color: #444;
+  width: 220px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.doctor-list .content h3:before {
+  display: none;
+}
+.doctor-list .content ul {
+  width: calc(100% - 220px);
+  padding-left: 1rem;
+  border-left: solid thin #ddd;
+}
+.doctor-list .content ul li {
+  width: auto;
+  float: none;
+  display: inline-block;
+}
+
+.doctor-list .content-body .content,
+.register .list-body .list .content {
+  border-top: solid 5px;
+}
+.doctor-list .list-box:nth-child(1) .content,
+.doctor-list .list-box:nth-child(11) .content,
+.doctor-list .list-box:nth-child(21) .content,
+.register .list-body .list:nth-child(1) .content,
+.register .list-body .list:nth-child(11) .content,
+.register .list-body .list:nth-child(21) .content {
+  border-top-color: #d5f2e8;
+}
+.doctor-list .list-box:nth-child(2) .content,
+.doctor-list .list-box:nth-child(12) .content,
+.doctor-list .list-box:nth-child(22) .content,
+.register .list-body .list:nth-child(2) .content,
+.register .list-body .list:nth-child(12) .content,
+.register .list-body .list:nth-child(22) .content {
+  border-top-color: #f9efd9;
+}
+
+.top_massage {
+  margin: 2rem 0 2rem;
+  text-align: justify;
+}
+.top_massage .box {
+  list-style: none;
+  padding: 0 2rem 0 0;
+  margin-bottom: 0;
+}
+.top_massage .box span {
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: #447a6a;
+  font-weight: 700;
+}
+.top_massage .mj {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #447a6a;
+  color: #fff;
+  text-align: center;
+}
+.top_massage li {
+  margin-bottom: 0.5rem;
+}
+.top_massage .item {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  letter-spacing: 0.05em;
+  border-right: solid 1px #447a6a;
+}
+.top_massage .night {
+  border-right: none;
+}
+
+/*彈跳視窗*/
+.popup-area {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.popup-area:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+}
+.popup-area .inset {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  max-width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.popup-area [class^="btn"] {
+  -o-transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+.popup-area .btn-X {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  background: #f39118;
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border-radius: 100%;
+  outline: none;
+}
+.popup-area .btn-X:hover {
+  background: #447a6a;
+}
+.form-box {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 2em;
+  background: #fff;
+  max-height: 80vh;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #eef5f3 0%, rgba(238, 245, 243, 0.8) 100%),
+    url(../../assets/sidebar-bg.png) left top/cover;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.5);
+}
+
+.register .list ul li:nth-child(5n+1) {
+  clear: both;
+}
+.doctor-list .content ul li {
+  width: auto;
+  float: none;
+  display: inline-block;
+}
+.register .list ul li a {
+  display: block;
+  color: #444;
+  font-size: 1.25rem;
+  border-radius: 3px;
+}
+.dot_title {
+  position: relative;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.dot_title:before {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  top: 1.25em;
+  width: 4px;
+  height: 4px;
+  margin-top: -0.2em;
+  border-radius: 100%;
+  background: #447a6a;
+}
+
+@media screen and (min-width: 992px) {
+  /*麵包屑*/
+  .crumb .container {
+    padding: 0 3rem;
+  }
+  /*我要掛號-按鈕*/
+  .register .list:hover .content {
+    box-shadow: 0 8px 13px 1px rgba(0, 0, 0, 0.15);
+  }
+  .register .list .content {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+
+  /*依醫生掛號*/
+  .tabs.owl-carousel .owl-stage-outer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
+  }
+  .tabs.owl-carousel .owl-stage-outer:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .doctor-list .tabs {
+    display: block;
+  }
+  .doctor-list .class-name {
+    display: none;
+  }
+  .doctor-list .content {
+    display: block;
+  }
+}
+.doctor-list {
+  margin: 2rem 0;
+}
+
+.p-regs .title2 .mjTitle {
+  display: block;
+  padding: 1.5rem 0 4.2rem;
+  margin-bottom: 2rem;
+  border-top: solid thin #ddd;
+  border-bottom: solid thin #ddd;
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.p-regs .title2 .mjTitle:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #447A6A;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.p-regs .mjTitle .note {
+  margin-bottom: 0;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+.p-regs .mjTitle .note-group {
+  float: right;
+  width: 50%;
+  margin-top: 0;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 992px){
+.doctor-list .tabs {
+    display: block;
+}
+}
+.p-regs .owl-stage {
+  display: flex;
+}
+
+.doctor-list .tabs {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+@media screen and (min-width: 992px){
+.tabs.owl-carousel .owl-stage-outer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+}
+.p-regs .owl-item li {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.doctor-list .tabs li a {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  /*background: rgba(255,255,255,0.6);*/
+  text-decoration: none;
+  position: relative;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+  border-radius: 0.5rem 0.5rem 0 0;
+  -o-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.register .list ul li a:hover {
+  font-weight: 700;
+  color: #ffffff;
+  background: #326c9e;
+}
+
+.p-regs .content-body .content {
+  margin-bottom: 12px;
+}
+.owl-item {
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+}
+/*.doctor-list .tabs .owl-item:nth-child(1) li,.doctor-list .tabs .owl-item:nth-child(11) li,.doctor-list .tabs .owl-item:nth-child(21) li,.register .list-body .list:nth-child(1) h3,.register .list-body .list:nth-child(11) h3,.register .list-body .list:nth-child(21) h3,
+.doctor-list .list-box:nth-child(1) .class-name,.doctor-list .list-box:nth-child(11) .class-name,.doctor-list .list-box:nth-child(21) .class-name{background:#D5F2E8}
+.doctor-list .tabs .owl-item:nth-child(2) li,.doctor-list .tabs .owl-item:nth-child(12) li,.doctor-list .tabs .owl-item:nth-child(22) li,.register .list-body .list:nth-child(2) h3,.register .list-body .list:nth-child(12) h3,.register .list-body .list:nth-child(22) h3,
+.doctor-list .list-box:nth-child(2) .class-name,.doctor-list .list-box:nth-child(12) .class-name,.doctor-list .list-box:nth-child(22) .class-name{background: #f9efd9;}
+.doctor-list .tabs .owl-item:nth-child(3) li,.doctor-list .tabs .owl-item:nth-child(13) li,.doctor-list .tabs .owl-item:nth-child(23) li,.register .list-body .list:nth-child(3) h3,.register .list-body .list:nth-child(13) h3,.register .list-body .list:nth-child(23) h3,
+.doctor-list .list-box:nth-child(3) .class-name,.doctor-list .list-box:nth-child(13) .class-name,.doctor-list .list-box:nth-child(23) .class-name{background:#f3d4d4}
+.doctor-list .tabs .owl-item:nth-child(4) li,.doctor-list .tabs .owl-item:nth-child(14) li,.doctor-list .tabs .owl-item:nth-child(24) li,.register .list-body .list:nth-child(4) h3,.register .list-body .list:nth-child(14) h3,.register .list-body .list:nth-child(24) h3,
+.doctor-list .list-box:nth-child(4) .class-name,.doctor-list .list-box:nth-child(14) .class-name,.doctor-list .list-box:nth-child(24) .class-name{background:#BCB5E2}
+.doctor-list .tabs .owl-item:nth-child(5) li,.doctor-list .tabs .owl-item:nth-child(15) li,.doctor-list .tabs .owl-item:nth-child(25) li,.register .list-body .list:nth-child(5) h3,.register .list-body .list:nth-child(15) h3,.register .list-body .list:nth-child(25) h3,
+.doctor-list .list-box:nth-child(5) .class-name,.doctor-list .list-box:nth-child(15) .class-name,.doctor-list .list-box:nth-child(25) .class-name{background:#fbf2ac}
+.doctor-list .tabs .owl-item:nth-child(6) li,.doctor-list .tabs .owl-item:nth-child(16) li,.doctor-list .tabs .owl-item:nth-child(26) li,.register .list-body .list:nth-child(6) h3,.register .list-body .list:nth-child(16) h3,.register .list-body .list:nth-child(26) h3,
+.doctor-list .list-box:nth-child(6) .class-name,.doctor-list .list-box:nth-child(16) .class-name,.doctor-list .list-box:nth-child(26) .class-name{background:#d6ecc4}
+.doctor-list .tabs .owl-item:nth-child(7) li,.doctor-list .tabs .owl-item:nth-child(17) li,.doctor-list .tabs .owl-item:nth-child(27) li,.register .list-body .list:nth-child(7) h3,.register .list-body .list:nth-child(17) h3,.register .list-body .list:nth-child(27) h3,
+.doctor-list .list-box:nth-child(7) .class-name,.doctor-list .list-box:nth-child(17) .class-name,.doctor-list .list-box:nth-child(27) .class-name{background:#fbe6c4}
+.doctor-list .tabs .owl-item:nth-child(8) li,.doctor-list .tabs .owl-item:nth-child(18) li,.doctor-list .tabs .owl-item:nth-child(28) li,.register .list-body .list:nth-child(8) h3,.register .list-body .list:nth-child(18) h3,.register .list-body .list:nth-child(28) h3,
+.doctor-list .list-box:nth-child(8) .class-name,.doctor-list .list-box:nth-child(18) .class-name,.doctor-list .list-box:nth-child(28) .class-name{background: #e3d1f1;}
+.doctor-list .tabs .owl-item:nth-child(9) li,.doctor-list .tabs .owl-item:nth-child(19) li,.doctor-list .tabs .owl-item:nth-child(29) li,.register .list-body .list:nth-child(9) h3,.register .list-body .list:nth-child(19) h3,.register .list-body .list:nth-child(29) h3,
+.doctor-list .list-box:nth-child(9) .class-name,.doctor-list .list-box:nth-child(19) .class-name,.doctor-list .list-box:nth-child(29) .class-name{background: #c7dff9;}
+.doctor-list .tabs .owl-item:nth-child(10) li,.doctor-list .tabs .owl-item:nth-child(20) li,.doctor-list .tabs .owl-item:nth-child(30) li,.register .list-body .list:nth-child(10) h3,.register .list-body .list:nth-child(20) h3,.register .list-body .list:nth-child(30) h3,
+.doctor-list .list-box:nth-child(10) .class-name,.doctor-list .list-box:nth-child(20) .class-name,.doctor-list .list-box:nth-child(30) .class-name{background: #f5cfdf;} */
+
+
+
+</style>
