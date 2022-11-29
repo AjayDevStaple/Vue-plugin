@@ -16,10 +16,14 @@ const outGetWebSchebasic = async (data) => {
   return await axiosApiInstance.post(`${url}api/his7/reg/websrv/outGetWebSchebasic`, data)
 }
 
+const outCheckFvRv = async (data) => {
+  return await axiosApiInstance.post(`${url}api/his7/reg/websrv/outCheckFvRv` , data)
+} 
 
 
 export const _services = {
   outGetRegRegbasic ,
   outGetWebList,
-  outGetWebSchebasic
+  outGetWebSchebasic,
+  outCheckFvRv
 };

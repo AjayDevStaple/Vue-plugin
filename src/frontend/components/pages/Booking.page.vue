@@ -68,8 +68,9 @@
                           type="radio"
                           id="loginID_3"
                           name="idType"
-                          value="2"
+                          value="0"
                           onclick="show_birth(3)"
+                          v-model="idType"
                         />
                         <label>
                           <font style="vertical-align: inherit">
@@ -83,8 +84,9 @@
                           type="radio"
                           id="loginID_3"
                           name="idType"
-                          value="2"
+                          value="1"
                           onclick="show_birth(3)"
+                          v-model="idType"
                         />
                         <label>
                           <font style="vertical-align: inherit">
@@ -100,6 +102,7 @@
                           name="idType"
                           value="2"
                           onclick="show_birth(3)"
+                          v-model="idType"
                         />
                         <label>
                           <font style="vertical-align: inherit">
@@ -113,8 +116,9 @@
                           type="radio"
                           id="loginID_3"
                           name="idType"
-                          value="2"
+                          value="3"
                           onclick="show_birth(3)"
+                          v-model="idType"
                         />
                         <label>
                           <font style="vertical-align: inherit">
@@ -131,42 +135,47 @@
                     name="patData"
                     id="patData"
                     class="form-control"
-                    placeholder="Example: A123456789"
+                    placeholder="Example: A12345678"
                     onchange="chk_password(1)"
                     onkeyup="input_strtoupper(this,event)"
+                    v-model="patData"
                   />
                   <small id="patData_txt" class="red warning_txt"></small>
                 </div>
+
+
+
         
                 <div class="form-group">
                   <label for="label"><i class="far fa-id-card"></i></label>
                   <input
                     type="text"
-                    name="patData"
+                    name="birthdate"
                     id="patData"
                     class="form-control"
-                    placeholder="Example: A123456789"
+                    placeholder="Please enter your birthday(the date of the Republic of China)"
                     onchange="chk_password(1)"
                     onkeyup="input_strtoupper(this,event)"
+                    v-model="birthDate"
                   />
                   <small id="patData_txt" class="red warning_txt"></small>
                 </div>
+
         
                 <span class="mid-text"
-                  >Example: if the date of birth is January 01, 1982, please enter
-                  0820101</span
+                  >  Example:The date of birth date is January 1, 1982, please enter 0820101</span
                 >
         
                 <div class="form-group">
                   <label for="label"><i class="far fa-id-card"></i></label>
                   <input
                     type="text"
-                    name="patData"
+                    name="mobile"
                     id="patData"
                     class="form-control"
-                    placeholder="Example: A123456789"
-                    onchange="chk_password(1)"
-                    onkeyup="input_strtoupper(this,event)"
+                    placeholder="Please enter the mobile number"
+                    v-model="userId"
+             
                   />
                   <small id="patData_txt" class="red warning_txt"></small>
                 </div>
@@ -252,10 +261,12 @@
                 </div>
         <div class="btn-div">
 
-            <span class="btn">Confirm</span>
+            <span class="btn" @click="handleSubmit">Confirm</span>
                 <span class="btn1">Cancel</span>
 
         </div>
+       
+       
                 
               </Col>
         </Row>
@@ -265,14 +276,79 @@
 </template>
 
 <script lang="ts">
+import { _services } from "./../../../Services/Api/index";
 export default {
   name: "BookingPage",
   components: {},
-  methods: {},
+  props: ['data'],
+  methods: {
+    handleSubmit() {
+
+           setTimeout(() => {
+            this.$router.push({name: 'Booking-Success'}) 
+           },3000)
+   
+
+
+      const data = {
+  birthDate: this.birthDate, //input
+  deptCode: "string",
+  deptRoom: "string",
+  docCode: "string",
+  idType: this.idType, //input
+  opdDate: "string",
+  pass: "Kumar",
+  password: this.password,
+  patData: this.patData, //input
+  regIp: "string",
+  regWay: "string",
+  shiftNo: "早班",
+  userId: this.userId
+     
+}
+
+     
+      _services.outCheckFvRv(data)
+        .then((res) => {
+          console.log(res.data.code)
+          console.log(res.data.data)
+
+
+         
+            this.$router.push({name: 'Booking-Success'})  
+         console.log("chaleya")
+         
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+
+    getData() {
+      console.log('=====>>>',  this.$route.params)
+    }
+    },
+ 
   data() {
     return {
-      state: "",
+  birthDate: "",
+  deptCode: "",
+  deptRoom: "",
+  docCode: "",
+  idType: "",
+  opdDate: "2022-11-29T04:43:47.780Z",
+  pass: "Kumar",
+  password: "",
+  patData: "",
+  regIp: "string",
+  regWay: "string",
+  shiftNo: "string",
+  userId: ""
+
     };
+  },
+  beforeMount() {
+    this.getData();
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
 
     <section class="container s-cansul"> 
-        <article class="d-none d-lg-block"> <!--新增5固定項目，各3個文字欄位--> 
+        <article class="d-none d-lg-block">
         </article> 
         <div class="register"> 
          <div class="title2"> 
