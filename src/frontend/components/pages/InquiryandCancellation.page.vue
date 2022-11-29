@@ -259,7 +259,6 @@ body:before {
 }
 
 body {
-  font-family: "Heebo", "微軟正黑體", sans-serif;
   position: relative;
   padding-top: 123px;
 }
@@ -1220,7 +1219,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
   content: "";
   position: absolute;
   top: 0;
-  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   display: block;
   text-indent: 0;
@@ -1572,7 +1570,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 2px;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   color: #326c9e;
 }
@@ -1675,7 +1672,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
   padding: 0 10px;
   display: table;
   letter-spacing: 2px;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   color: #326c9e;
   position: relative;
@@ -1951,7 +1947,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
 
 .index-video .video-wrap a:before {
   content: "\f144";
-  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 5rem;
   color: rgba(255, 255, 255, 0.9);
@@ -2044,7 +2039,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 500;
   margin-top: 0.5rem;
 }
@@ -2152,7 +2146,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
 
 .index .paper .box .head .content h3 {
   font-size: 1.3em;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 500;
 }
 
@@ -2182,7 +2175,6 @@ body.on header button.navbar-toggler span:nth-child(3) {
 
 .index .paper .box ul li a:after {
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
   font-weight: 700;
   position: absolute;
   top: 50%;
@@ -3128,7 +3120,6 @@ footer .foot-contact ul li i {
   padding: 0.2em 0.4em;
   position: absolute;
   top: 0;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 100;
   margin: 0.5rem 0 1rem;
   padding: 4px 8px;
@@ -3852,7 +3843,6 @@ footer .foot-contact ul li i {
 
 .doctor-item .more-link span {
   display: inline-block;
-  font-family: "Noto Sans TC", sans-serif;
   font-weight: 100;
   margin: 0 0.25rem;
   padding: 0.25rem 0.5rem;
@@ -4426,7 +4416,6 @@ footer .foot-contact ul li i {
 .download .item a:after,
 .download .item a:before {
   content: "\f358";
-  font-family: "Font Awesome 5 Free";
   font-weight: 700;
   color: #447a6a;
   font-size: 2rem;
@@ -4633,7 +4622,6 @@ footer .foot-contact ul li i {
 .video-detail .info .date {
   display: inline-block;
   height: 60px;
-  font-family: "Noto Sans TC", sans-serif;
   background: #b4bfb7;
   color: #fff;
   text-align: center;
@@ -4720,7 +4708,6 @@ footer .foot-contact ul li i {
   content: "\f13a";
   right: 0;
   top: 0;
-  font-family: "Font Awesome 5 Free";
   font-weight: 700;
   color: #447a6a;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -5943,7 +5930,6 @@ footer .foot-contact ul li i {
 
   header .navbar-expand-lg .navbar-nav .nav-link:not(.no-i):before {
     content: "\f107";
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: #fff;
     position: absolute;
@@ -6026,7 +6012,6 @@ footer .foot-contact ul li i {
 
   header .item-wrap .group .sub-title:before {
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     top: 50%;
     left: inherit;
@@ -6474,7 +6459,6 @@ footer .foot-contact ul li i {
 
   .index-news .item .info h3 {
     margin-top: 0.5rem;
-    font-family: "Noto Sans TC", sans-serif;
     font-weight: 500;
     color: #212529;
     line-height: 1.5;
@@ -6974,7 +6958,6 @@ footer .foot-contact ul li i {
 
   [class$="title-list2"] .date:before {
     content: "\f017";
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 0.25rem;
   }
@@ -7828,7 +7811,6 @@ footer .foot-contact ul li i {
   .loading_area .loader .load2:before {
     content: "\f00d";
     display: inline-block;
-    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1.5rem;
     width: 80px;
@@ -8180,7 +8162,6 @@ footer .foot-contact ul li i {
 }
 
 body {
-  font-family: "Heebo", "微軟正黑體", sans-serif;
   position: relative;
   padding-top: 123px;
 }

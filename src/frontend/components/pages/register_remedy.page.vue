@@ -82,7 +82,7 @@ export default {
 
 /* CSS Document */
 body:before{display:none;content:'';pointer-events:none;z-index:9999;position:fixed;left:0;top:0;bottom:0;width:6px;background:-moz-linear-gradient(left,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);background:-webkit-linear-gradient(left,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);background:linear-gradient(to right,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000',endColorstr='#00000000',GradientType=1)}
-body{font-family:'Heebo','微軟正黑體',sans-serif;position:relative;padding-top: 123px;}
+body{position:relative;padding-top: 123px;}
 body.on:after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:2;background:rgba(0,0,0,0.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 body,h3,.form-control{font-size:18px;line-height:1.6;}
 a{color:inherit;text-decoration:none}
