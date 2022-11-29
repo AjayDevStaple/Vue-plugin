@@ -50,6 +50,10 @@ const routes: RouteRecordRaw[] = [
         name: 'SubService',
         path: '/subservice', component: () => import('./components/pages/sectionregistration/subservice.page.vue')
     },
+    {
+        name : 'Booking-Success',
+        path: '/booking-successfully' , component: () => import('./components/pages/Booking-Success.page.vue')
+    }
 
 ]
 

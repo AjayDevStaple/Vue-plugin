@@ -57,6 +57,8 @@
                                 <h4>{{ createConversation(value.opdDate) }}</h4>
                                 <p>{{ DateConversation(value.opdDate) }}</p>
                             </td>
+                            
+
                         </tr>
                     </thead>
                     <tbody v-show="showMore">
@@ -67,7 +69,9 @@
                                 </p>
                             </td>
                             <td v-for="(value, index) in arrayData0">
-                                <span v-if="value.shiftNo == 1">{{ value.docName }}</span>
+
+
+                                <span @click="redirect(index)" v-if="value.shiftNo == 1">{{ value.docName }}</span>
                             </td>
                         </tr>
                         <tr >
@@ -79,6 +83,7 @@
                     </tbody>
                 </table>
             </div>
+            
             <!-- <div class="register-table">
                 <table class="table-border-radius">
                     <thead>
@@ -173,31 +178,28 @@
   
 <script lang="ts">
 import { _services } from './../../../../Services/Api/index'
+import BookingPageVue from '../Booking.page.vue'
 
 export default {
     name: 'HomePage',
+    components: {
+        BookingPageVue
+    },
     components: {
         navigation
     },
     data() {
         return {
-            arrayData0: null,
+            arrayData0: [],
             arrayData1: null,
-            showMore: false
+            showMore: false,
+
+
+            
         }
     },
     methods: {
         getData() {
-            /* const data = {
-                "deptCode": "string",
-                "deptRoom": "string",
-                "docCode": "string",
-                "endDate": "2022-11-30T06:46:11.343Z",
-                "pass": "string",
-                "shiftNo": "string",
-                "startDate": "2022-11-25T06:46:11.343Z",
-                "userId": "string"
-            } */
             const data = {
                 "deptCode": "woman",
                 "deptRoom": "236",
@@ -208,17 +210,38 @@ export default {
                 "startDate": "2022-11-21",
                 "userId": "webapp"
             }
+            _services.outGetWebSchebasic(data)
+            .then(res => {
+             
+                this.arrayData0 = res.data.data;
             _services.outGetWebSchebasic(data).then(res => {
                 this.arrayData0 = res.data.data
                 console.log(this.$route.query.abc)
                 /* this.arrayData0 = res.data.data[0]
                 this.arrayData1 = res.data.data[1] */
                 console.log('res1>>>>>', res.data.data)
-                /* console.log(res.data.data[1]) */
+
+                
+               
+
             }).catch(err => {
                 console.log(err)
             })
         },
+
+        redirect(index) {
+            
+            console.log(this.arrayData0?.[index])
+            const data =  {
+                data : this.arrayData0?.[index]
+            }            
+            console.log(data)
+            this.$router.push({name: 'Booking',
+            params: data ,   
+        }) 
+        },
+
+
         createConversation: function (id) {
             var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             var d = new Date(id);
@@ -328,9 +351,6 @@ export default {
     border-bottom: solid thin #ddd;
 }
 
-/* .sub-service table tbody {
-    display: none;
-} */
 
 button.dropbtn {
     background: transparent;
