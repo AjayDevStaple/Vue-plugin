@@ -8,14 +8,16 @@ import AccordionTab from 'primevue/accordiontab';
 import Button from 'primevue/button';
 import Card from 'primevue/card';
 import 'primevue/resources/primevue.min.css';
-// import 'primevue/resources/themes/mdc-light-indigo/theme.css';
-// import 'primeflex/primeflex.css';
-// import 'primeicons/primeicons.css';
+
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/home',
+        redirect: '/registration',
+    },
+    {
+        name: 'SectionRegistration',
+        path: '/registration', component: () => import('./components/pages/sectionregistration/registration.page.vue')
     },
     {
         name: 'HomePage',
@@ -42,10 +44,7 @@ const routes: RouteRecordRaw[] = [
         path: '/booking' , component : () =>  import('./../frontend/components/pages/Booking.page.vue')
     },
    
-    {
-        name: 'SectionRegistration',
-        path: '/registration', component: () => import('./components/pages/sectionregistration/registration.page.vue')
-    },
+    
     {
         name: 'SubService',
         path: '/subservice', component: () => import('./components/pages/sectionregistration/subservice.page.vue')

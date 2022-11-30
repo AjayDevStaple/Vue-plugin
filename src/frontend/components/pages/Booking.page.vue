@@ -15,14 +15,14 @@
                 <div class="row">
                   <div class="col-md-6 firstDivCont">
                     <div class="divFlex">
-                    <span class="tags">Date of visit</span>
-                    <span>2022/11/16 (Wednesday)</span>
+                    <span class="tags">Consultation Date</span>
+                    <span>{{this.$route.params.opdDate}}</span>
                     </div>
                   </div>
                   <div class="col-md-6 firstDivCont">
                     <div class="divFlex">
-                        <span class="tags">Section</span>
-                    <span>Family Medicine</span>
+                        <span class="tags">Department</span>
+                    <span>{{this.$route.params.deptName}}</span>
                     </div>
                   </div>
                 </div>
@@ -31,17 +31,14 @@
                   <div class="col-md-6 firstDivCont">
                    <div class="divFlex">
                     <span class="tags">doctor</span>
-                    <span> Zhang Xianzheg</span>
+                    <span>{{this.$route.params.docName}}</span>
                    </div>
                   </div>
                   <div class="col-md-6 firstDivCont">
                     <div class="divFlex">
-                        <span class="tags">Consultation period</span>
+                        <span class="tags">Consultation Time</span>
                         <span
-                          >He picked up the burnt end of the branch and made a mark on the
-                          stone. Day 52 if the marks on the stone were accurate. He couldn't
-                          be sure. Day and nights had begun to blend together creating
-                          confusion, but he knew it was a long time. Much too long.</span
+                          >{{this.$route.params.shiftNo}}</span
                         >
                     </div>
                   </div>
@@ -50,13 +47,13 @@
                   <div class="col-md-6 firstDivCont">
                    <div class="divFlex">
                     <span class="tags"> Consultation location</span>
-                    <span> Consulting room 97, Floor 05 , Outpatient Building</span>
+                    <span> {{this.$route.params.webRoomDesc}}</span>
                    </div>
                   </div>
                   <div class="col-md-6 firstDivCont"> 
                     <div class="divFlex">
                         <span class="tags"> appoinment number</span>
-                        <span> 009</span>
+                        <span>{{this.$route.params.roomDesc}}</span>
                     </div>
                   </div>
                 </div>
@@ -182,83 +179,7 @@
         
                 <hr />
         
-                <div class="Card">
-                  <span
-                    class="badge badge-success badage-style"
-                    style="background-color: #447a6a"
-                    >Dosing agent:</span
-                  >
-                 <div class="radio-box mt-3">
-                    <div class="radio-btns">
-                        <input
-                          type="radio"
-                          id="loginID_3"
-                          name="idType"
-                          value="2"
-                          onclick="show_birth(3)"
-                        />
-                        <label>
-                          <font style="vertical-align: inherit">
-                            <font style="vertical-align: inherit"
-                              >Book your first dose</font
-                            >
-                          </font>
-                        </label>
-                      </div>
-                      <div class="radio-btns">
-                        <input
-                          type="radio"
-                          id="loginID_3"
-                          name="idType"
-                          value="2"
-                          onclick="show_birth(3)"
-                        />
-                        <label>
-                          <font style="vertical-align: inherit">
-                            <font style="vertical-align: inherit">Book a second dose</font>
-                          </font>
-                        </label>
-                      </div>
-                      <div class="radio-btns">
-                        <input
-                          type="radio"
-                          id="loginID_3"
-                          name="idType"
-                          value="2"
-                          onclick="show_birth(3)"
-                        />
-                        <label>
-                          <font style="vertical-align: inherit">
-                            <font style="vertical-align: inherit"
-                              >Reserve the third dose (additional dose)</font
-                            >
-                          </font>
-                        </label>
-                      </div>
-                      <div class="radio-btns">
-                        <input
-                          type="radio"
-                          id="loginID_3"
-                          name="idType"
-                          value="2"
-                          onclick="show_birth(3)"
-                        />
-                        <label>
-                          <font style="vertical-align: inherit">
-                            <font style="vertical-align: inherit"
-                              >Reserve the fourth dose (additional dose)</font
-                            >
-                          </font>
-                        </label>
-                      </div>
-                 </div>
-        
-                  <span class="main-head-red box-red-btn">
-                    The conditions for injection will be explained in each special
-                    clinic. if in not met when you report, the hospitial will not be
-                    able to provide injection.</span
-                  >
-                </div>
+                
         <div class="btn-div">
 
             <span class="btn" @click="handleSubmit">Confirm</span>
@@ -277,6 +198,7 @@
 
 <script lang="ts">
 import { _services } from "./../../../Services/Api/index";
+import { isProxy, toRaw } from 'vue';
 export default {
   name: "BookingPage",
   components: {},
@@ -284,27 +206,26 @@ export default {
   methods: {
     handleSubmit() {
 
-           setTimeout(() => {
-            this.$router.push({name: 'Booking-Success'}) 
-           },3000)
+          //  setTimeout(() => {
+          //   this.$router.push({name: 'Booking-Success'}) 
+          //  },3000)
    
 
 
-      const data = {
+  const data = {
   birthDate: this.birthDate, //input
-  deptCode: "string",
-  deptRoom: "string",
-  docCode: "string",
+  deptCode: this.$route.params.deptCode,
+  deptRoom: this.$route.params.deptRoom,
+  docCode: this.$route.params.deptRoom,
   idType: this.idType, //input
-  opdDate: "string",
+  opdDate: this.$route.params.opdDate,
   pass: "Kumar",
   password: this.password,
   patData: this.patData, //input
-  regIp: "string",
-  regWay: "string",
-  shiftNo: "早班",
-  userId: this.userId
-     
+  regIp: this.$route.params.regIp,
+  regWay: this.$route.params.regWay,
+  shiftNo: this.$route.params.shiftNo,
+  userId: this.userId 
 }
 
      
@@ -312,11 +233,9 @@ export default {
         .then((res) => {
           console.log(res.data.code)
           console.log(res.data.data)
+            // this.$router.push({name: 'Booking-Success'})  
 
-
-         
-            this.$router.push({name: 'Booking-Success'})  
-         console.log("chaleya")
+          
          
         })
         .catch((err) => {
@@ -325,7 +244,7 @@ export default {
     },
 
     getData() {
-      console.log('=====>>>',  this.$route.params)
+      console.log('=====> boolking >>',  this.$route.params.deptName)
     }
     },
  
@@ -353,160 +272,9 @@ export default {
 };
 </script>
 
-<style>
-.btn-div {
-    display: flex;
-}
-.b-page .main-head {
-  display: block;
-  padding: 1.5rem 0 1.2rem;
-  margin: 2rem 0;
-  border-top: solid thin #ddd;
-  border-bottom: solid thin #ddd;
-  position: relative;
-  font-size: 1.75rem;
-  font-weight: 400;
-}
 
-.b-page .Card {
-  border-width: 1px !important;
-  border-color: #447a6a !important;
-  height: 264px;
-  width: 100%;
-  border-radius: .75rem;
-  overflow: hidden;
-}
-.b-page .radio-box {
-    
-}
-.b-page .radio-box .radio-btns {
-    display: inline-block;
-    line-height: normal;
-    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-}
+<style scoped src="../../../frontend/components/pages/styles/Booking.page.css">
 
-.badage-style {
-  width: 90px;
-}
-
-.btn1 {
-    flex-direction: row;
-  width: 90px;
-  background-color: white !important;
-  margin-left: 200px;
-  margin-top: 50px;
-  border-radius: 34px !important;
-  border: 1px solid #447a6a ;
-  text-align: center;
-  
-}
-
-
-.btn {
-    flex-direction: row;
-  width: 90px;
-  background-color: #447a6a !important;
-  margin-left: 110px;
-  margin-top: 50px;
-  border-radius: 34px !important;
-}
-.b-page .maindiv{
-    padding: 0 30px;
-}
-.b-page .maindiv-inner {
-    border-radius: 1rem;
-    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
-    overflow: hidden;
-    margin-bottom: 3rem;
-}
-.b-page .firstDiv
-{
-    border-right: solid 4px #447a6a;
-    padding: 2rem 2rem;
-}
-.firstDivCont .divFlex {
-    display: flex;
-    margin-bottom: 15px;
-}
-
-/*.radio-box input[type="radio"] {
-    display: none;
-}*/
-.radio-box label{
-    font-size: 18px;
-}
-.white-btn {
-  width: 90px;
-  margin-left: 200px;
-  margin-top: 50px;
-  border-radius: 34px !important;
-  background-color: white !important;
-  border-color: #447a6a !important;
-}
-
-.firstDiv {
-  background-color: #e9f4ed;
-}
-
-.firstDivCont {
-    font-size: 18px;
-    font-weight: 700;
-}
-.secondDiv {
-    padding: 2rem;
-}
-.secondDiv .card .badge {
-    font-size: 18px;
-    line-height: 1.6;
-    width: 27%;
-    border-radius: 0 0 5px 0;
-}
-.b-page .main-head-red {
-  color: red;
-  font-size: 22.4px;
-}
-.form-group {
-    display: flex;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.form-group label {
-    margin-bottom: 0;
-    margin-right: 0.5rem;
-    width: 30px;
-}
-.form-group input, .form-group select {
-    padding: 0 0.5rem;
-    width: calc(100% - 40px);
-    height: 44px;
-    line-height: 44px;
-    border: solid thin #ddd;
-    outline: none;
-    transition: all .3s linear;
-    border-radius: 3px;
-}
-.form-group label i {
-    color: #447A6A;
-    font-size: 1.5rem;
-}
-.mid-text{
-    font-size: 18px;
-    line-height: 1.6;
-    padding-left: 40px;
-    display: block;
-}
-.box-red-btn {
-    font-size: 14.4px !important;
-    padding: 0 15px;
-}
-.tags {
-  background-color: #447a6a;
-  color: #fff;
-  width: 90px;
-  margin-right: 1rem;
-  padding: 0 0.5rem;
-  border-radius: 3px;
-  height: 100%;
-}
 </style>
+
+
