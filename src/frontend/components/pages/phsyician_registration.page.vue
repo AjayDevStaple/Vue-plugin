@@ -88,7 +88,7 @@
               
               ><i class="fas fa-chevron-circle-down btn-i"></i>
             </h3>
-            <div style="display : flex; flex-wrap: wrap" class="content" v-for="(value, index) in fulldata" >
+            <div style=" flex-wrap: wrap" class="content" v-for="(value, index) in fulldata" >
               <div class="list" v-for="(abcdata, index) in fulldata[index].deptList">
                 <h3 >
                   <a :href="`${url}#/subservice`"
@@ -106,29 +106,15 @@
                     <a :href="`${url}#/subservice`"
                                 class="dot_title" title="COVID-19 Vaccination: BNT"><font style="vertical-align: inherit"
                         ><font style="vertical-align: inherit"
-                          >{{efgdata.docName}}</font
-                        ></font
-                      ></a>
-                    >
+                          >{{efgdata.docName}}</font></font></a>
+                    
                   </li>
                  
                 </ul>
               </div>
             </div>
           
-            <!-- <div class="row p-regis-page">
-              <div class="col-md-2 head-area">
-                  <h3>heading</h3>
-              </div>
-              <div class="col-md-10 list-area">
-                <ul>
-                  <li>list 1</li>
-                  <li>list 2</li>
-                  <li>list 3</li>
-                  <li>list 4</li>
-                </ul>
-              </div>
-            </div> -->
+          
           </article>
         </div>
       </section>
