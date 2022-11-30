@@ -1,0 +1,1160 @@
+.card {
+    background: #ffffff30 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 10px !important;
+}
+
+.card-image {
+    border-radius: 10px 10px 0 0;
+    height: 15rem
+}
+
+.post-title {
+    font-size: 60px;
+}
+
+.m-wrap .mjTitle .h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 0
+}
+
+.m-wrap .mjTitle .h1 i {
+    font-size: 2.5rem;
+    vertical-align: middle;
+    margin-right: .5rem
+}
+
+.m-wrap .mjTitle .sub-infor {
+    margin-bottom: 0;
+    color: #326c9e;
+    font-weight: 700;
+    line-height: 1.5
+}
+
+.m-wrap .mjTitle .btn-style {
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    margin: 0 1rem;
+    font-size: 1rem;
+    text-align: center
+}
+
+.dot_title {
+    position: relative;
+    padding: .5rem .5rem .5rem 1rem
+}
+
+.dot_title:before {
+    content: '';
+    position: absolute;
+    left: .25rem;
+    top: 1.25em;
+    width: 4px;
+    height: 4px;
+    margin-top: -.2em;
+    border-radius: 100%;
+    background: #447a6a
+}
+
+.dot_title.py-0:before {
+    top: .6em
+}
+
+.crumb {
+    padding: 1.25rem 0 .75rem;
+    background: #f7f7f7;
+}
+
+.crumb ol,
+.crumb h2 {
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px
+}
+
+.crumb ol li {
+    display: inline-block;
+    color: #444
+}
+
+.crumb ol li.active {
+    color: #a1a1a1
+}
+
+.crumb ol li:not(:last-child):after {
+    content: "/";
+    margin: 0 5px;
+    color: #444
+}
+
+.crumb+.container {
+    margin-top: 2rem
+}
+
+.register-btn {
+    position: fixed;
+    right: 1em;
+    bottom: 5em;
+    z-index: 999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #2F7E20;
+    box-shadow: 0 5px 5px #c9c9c9;
+    display: none
+}
+
+.register-btn:hover {
+    background: #e4bb4f
+}
+
+.register-btn a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none
+}
+
+.register-btn .photo {
+    width: 30px;
+    margin: 0 auto
+}
+
+.register-btn h3 {
+    font-size: .85em;
+    color: #fff;
+    margin-top: .3em
+}
+
+.register-btn img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(500%);
+    -webkit-filter: brightness(500%)
+}
+
+.register>article {
+    margin-bottom: 2rem
+}
+
+.register .list+.list {
+    margin-top: 2rem
+}
+
+.register .content-body .list+.list {
+    margin-top: .5em;
+    padding-top: .5em;
+    border-top: dotted 1px #ddd
+}
+
+.register .list h3,
+.doctor-list .class-name {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    position: relative
+}
+
+.register .list-body .list h3,
+.doctor-list .class-name {
+    min-width: 150px;
+    display: inline-block;
+    padding: .5rem 2rem .25rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border-radius: .5rem .5rem 0 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.register .list-body .list h3 .btn-i {
+    display: none
+}
+
+.register .list .content {
+    position: relative;
+    padding: 1rem 2rem;
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    background: #fff
+}
+
+.register .list ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0
+}
+
+.register .list ul:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.register .list ul li {
+    display: inline-block;
+    float: left;
+    width: calc(100% / 5);
+}
+
+.register .list ul li:nth-child(5n+1) {
+    clear: both
+}
+
+.register .list ul li a {
+    display: block;
+    color: #444;
+    font-size: 1.25rem;
+    border-radius: 3px;
+}
+
+.register .list ul li a:hover {
+    font-weight: 700;
+    color: #ffffff;
+    background: #326c9e;
+}
+
+.register .calender table {
+    width: 100%
+}
+
+.register .calender .register-table+.register-table {
+    margin-top: 2em
+}
+
+.register .calender table tr {
+    border-bottom: solid thin #ddd
+}
+
+.register .calender table tr:nth-child(even) {
+    background: #eef5f3
+}
+
+.register .calender table td {
+    padding: .5em;
+    text-align: center;
+    position: relative
+}
+
+.register .calender table td:first-child {
+    width: 110px;
+}
+
+.register .calender table td {
+    border-right: solid thin #ddd;
+    width: calc((100% - 110px) / 6);
+}
+
+.register .calender table ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0
+}
+
+.register .calender table li {
+    line-height: normal
+}
+
+.register .calender table li[class] a {
+    color: #444
+}
+
+.register .calender table li[class] a:hover {
+    background: transparent;
+    color: initial;
+    cursor: default
+}
+
+.register .calender table li[class] a:after {
+    display: inline-block;
+    color: #e25d95;
+    border: solid thin;
+    border-radius: 6px;
+    font-size: .85em;
+    font-weight: 700;
+    margin-left: .2em;
+    padding: 2px
+}
+
+table .late a:after {
+    content: '已過時段'
+}
+
+table .full a:after {
+    content: '額滿'
+}
+
+table .replace a:after {
+    content: '代診'
+}
+
+table .stop a:after {
+    content: '休診'
+}
+
+.web_en table .late a:after {
+    content: 'Session ended'
+}
+
+.web_en table .full a:after {
+    content: 'No more appointments available'
+}
+
+.web_en table .replace a:after {
+    content: 'Substitute physician'
+}
+
+.web_en table .stop a:after {
+    content: 'Not available'
+}
+
+.register .calender table li a {
+    text-decoration: none;
+    padding: .5em;
+    display: block;
+    color: #447A6A;
+    line-height: 1.2rem;
+}
+
+.register .calender table li a:hover {
+    background: rgba(0, 0, 0, 0.05)
+}
+
+.register .calender table li span {
+    font-size: 13px;
+    color: #ff67a6;
+    margin-left: 2px
+}
+
+.register .calender table thead {
+    cursor: pointer;
+    background: #447A6A;
+}
+
+.register .calender table thead td {
+    color: #fff;
+    width: calc((100% - 110px) / 6);
+}
+
+.register .calender table thead td span {
+    display: block
+}
+
+.register .calender table .linkInfo {
+    position: relative;
+    font-size: 1rem;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}
+
+.register .calender table .linkNum {
+    display: inline-block;
+    margin-left: 0;
+    font-size: .9rem;
+    color: #447A6A;
+}
+
+.register .calender .register-table:not(:first-child) tbody {
+    display: none
+}
+
+.register .calender .register-table+.register-table {
+    margin-top: 2em
+}
+
+.register .calender thead i {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    font-size: 2.4rem;
+    -o-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear
+}
+
+.register .calender .open i {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.register .calender thead:hover i {
+    color: #fff
+}
+
+.tooltip {
+    opacity: 1 !important
+}
+
+.tooltip-inner {
+    max-width: 500px;
+    text-align: left;
+    background: #eee;
+    color: #000;
+    border: solid thin #ccc;
+    border-left: solid 3px #447A6A;
+    line-height: 1.8;
+    padding: .7em 1.5em;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .2);
+    font-size: 1rem
+}
+
+.tooltip .arrow:before {
+    border-right-color: #447A6A !important;
+    -webkit-filter: drop-shadow(0 2px 2px #333);
+    z-index: -1
+}
+
+.register .calender--day7 table td,
+.register .calender--day7 table thead td {
+    width: calc((100% - 110px) / 7);
+}
+
+.btn-circle {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #447A6A;
+    color: #fff;
+    border: solid 1px #447A6A;
+    border-radius: 100%;
+    text-align: center
+}
+
+.btn-circle:hover {
+    background: #f39118;
+    border-color: #f39118
+}
+
+.calender_mb .clinic_overview {
+    background: #fff
+}
+
+.calender_mb .clinic_top {
+    position: relative;
+    margin-bottom: 0;
+    padding: 1rem;
+    background: #f1f1f1
+}
+
+.calender_mb .clinic_top .btn-circle {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+.calender_mb .clinic_top .left {
+    left: 1rem
+}
+
+.calender_mb .clinic_top .right {
+    right: 1rem
+}
+
+.calender_mb .btn-circle i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.calender_mb .btn-circle.left i {
+    margin-left: -2px
+}
+
+.calender_mb .btn-circle.right i {
+    margin-left: 2px
+}
+
+.calender_mb .clinic_top .top_title {
+    margin-bottom: 0;
+    padding: .75rem 55px;
+    text-align: center
+}
+
+.calender_mb .clinic_body {
+    position: relative;
+    padding: 1rem;
+    background: #fff
+}
+
+.calender_mb .clinic_infor {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.calender_mb .clinic_infor li+li {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: dotted 1px #ddd
+}
+
+.calender_mb .clinic_infor .item {
+    float: left
+}
+
+.calender_mb .clinic_infor .item:last-child {
+    margin-top: .5rem
+}
+
+.calender_mb .clinic_infor .doctor-name {
+    font-size: 1.25rem;
+    color: #4383b1
+}
+
+.calender_mb .clinic_infor .doctor-name .linkNum {
+    display: inline-block;
+    margin-left: .5rem;
+    font-size: .9rem;
+    color: #4383b1;
+}
+
+.calender_mb .week-group {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    clear: both;
+    overflow: hidden
+}
+
+.calender_mb .week-group li {
+    float: left;
+    width: calc(100% / 6);
+    padding: .5rem .25rem .25rem
+}
+
+.calender_mb .week-group li+li {
+    border-left: dotted 1px #ddd
+}
+
+.clinic_date {
+    padding-bottom: .75rem;
+    font-size: 1.25rem;
+    text-align: center;
+    border-bottom: dotted 1px #ddd
+}
+
+.period-group .disabled {
+    opacity: .1
+}
+
+.period-group .custom-control {
+    text-align: center;
+    padding: .5rem 0;
+    height: 60px
+}
+
+.period-group .custom-control-label {
+    z-index: 1;
+    padding: .5rem;
+    color: #212529
+}
+
+.period-group .custom-control-label::before {
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: -1.5rem;
+    margin-top: -1.5rem
+}
+
+.period-group .custom-control-label::after {
+    display: none
+}
+
+.period-group .custom-control-label::before {
+    border-color: #f1f1f1;
+    background: #f1f1f1
+}
+
+.period-group .yellow input[type="radio"]:checked+label span,
+.period-group .yellow input[type="checkbox"]:checked+label span,
+.period-group .yellow .custom-control-input:checked~.custom-control-label::before,
+.period-group .yellow.on .custom-control-input~.custom-control-label::before {
+    background: #f4f0c2;
+    border-color: #f4f0c2
+}
+
+.period-group .blue input[type="radio"]:checked+label span,
+.period-group .blue input[type="checkbox"]:checked+label span,
+.period-group .blue .custom-control-input:checked~.custom-control-label::before,
+.period-group .blue.on .custom-control-input~.custom-control-label::before {
+    background: #b8daf4;
+    border-color: #b8daf4
+}
+
+.period-group .red input[type="radio"]:checked+label span,
+.period-group .red input[type="checkbox"]:checked+label span,
+.period-group .red .custom-control-input:checked~.custom-control-label::before,
+.period-group .red.on .custom-control-input~.custom-control-label::before {
+    background: #f4caca;
+    border-color: #f4caca
+}
+
+.calender_mb .clinic_single {
+    position: relative;
+    padding: 0 1rem 1rem;
+    background: #eee
+}
+
+.calender_mb .clinic_single:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background: #fff
+}
+
+.calender_mb .clinic_single .clinic_top {
+    border-radius: .5rem .5rem 0 0;
+    background: #447a6a;
+    color: #fff;
+    box-shadow: 0 10px 11px rgba(0, 0, 0, 0.4);
+    font-size: 18px
+}
+
+.register .login {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #f2f2f2;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    background: #fff
+}
+
+.register .login.w-100 {
+    max-width: none
+}
+
+.register .login .item ul,
+.register .login .item p {
+    padding-left: 40px;
+    list-style: none;
+    margin: 0
+}
+
+.register .login .item ul li {
+    display: inline-block;
+    line-height: normal;
+    padding: .5rem .5rem .5rem 1.5rem
+}
+
+.register .login .item ul li:not(:last-child) {
+    margin-right: 1rem
+}
+
+.register .two-group {
+    margin: auto
+}
+
+.register .modify {
+    padding-top: 2rem
+}
+
+.register .modify article {
+    margin-bottom: 2rem
+}
+
+.register .modify .modify-info {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+.register .modify .modify-info:after {
+    content: '';
+    display: block;
+    clear: both
+}
+
+.register .modify .item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% / 2);
+    border-bottom: dashed thin #dcdcdc;
+    padding: 1rem .5rem 0;
+    min-height: 81px;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.register .modify .item.large {
+    width: 100%
+}
+
+.register .modify .item label {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    min-width: 100px
+}
+
+.register .modify .item input:not([type="checkbox"]),
+.register .modify .item select {
+    border: 0;
+    min-width: 120px;
+    width: calc(100% - 117px);
+    height: 44px;
+    border: solid thin #ddd;
+    padding: 0 .5em;
+    outline: none;
+    border-radius: 3px;
+}
+
+.register .modify .item select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 1.5em
+}
+
+.register .modify .item select::-ms-expand {
+    display: none
+}
+
+.register .modify .item .select {
+    display: inline-block;
+    position: relative
+}
+
+.register .modify .item .gp>* {
+    margin-top: .25rem
+}
+
+.register .modify .item .gp>*+* {
+    margin-left: .25rem
+}
+
+.register .modify .item .same {
+    width: 100%;
+    margin-bottom: 1em;
+    color: #447a6a;
+    font-weight: 700
+}
+
+.register .modify .item .same label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.register .modify .item .same+.gp {
+    width: 100%
+}
+
+.register .modify .custom-group {
+    list-style: none;
+    width: 440px;
+    margin: 0;
+    padding: 0 0 0 .25rem;
+}
+
+.register .modify .custom-group li {
+    display: inline-block;
+}
+
+.register .modify .item .custom-group+input {
+    width: calc(100% - 440px);
+}
+
+.register .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0
+}
+
+.register .signup {
+    border-top: solid thin #ddd;
+    margin-top: 2rem;
+    padding-top: 2rem
+}
+
+.register .signup button {
+    display: block;
+    width: 200px;
+    margin: 0 auto
+}
+
+.register-table table {
+    width: 100%;
+    border-left: solid thin #ddd;
+    border-top: solid thin #ddd
+}
+
+.register-table table tr:nth-child(even) {
+    background: #eef5f3
+}
+
+.register-table table td {
+    padding: 1rem .5rem;
+    text-align: center;
+    border-right: solid thin #ddd;
+    border-bottom: solid thin #ddd
+}
+
+.register-table table td button[disabled] {
+    background: transparent;
+    border-color: transparent;
+    color: #444;
+    font-weight: 400;
+    cursor: default
+}
+
+.register-table table thead {
+    background: #447A6A;
+    color: #fff
+}
+
+.register-table table thead td {
+    border: 0
+}
+
+.register-table .txt-big {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.register-table .txt-big.blue {
+    font-size: 2rem;
+    color: #326c9e
+}
+
+.remedy-tips {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+    text-align: center
+}
+
+.remedy-tips .weeks-title {
+    padding: 0 .5rem;
+    background: #447A6A;
+    color: #fff;
+    margin-bottom: .5rem;
+    padding: .25rem .5rem;
+    border-radius: .5rem
+}
+
+.remedy-tips p {
+    margin-bottom: 0
+}
+
+.register .block+.block {
+    margin-top: 2rem
+}
+
+.register .block h3 {
+    font-size: 1.6rem;
+    color: #447A6A
+}
+
+.block .login.line {
+    padding: 0;
+    border: 0;
+    background: transparent
+}
+
+.register .block.remedyok h3 {
+    color: #a4977b
+}
+
+.register .block.remedyok table thead {
+    background: #a4977b
+}
+
+.dose_login {
+    border: solid 1px #447A6A;
+    border-radius: .75rem;
+    padding: 0 .5rem .5rem;
+    overflow: hidden;
+}
+
+.dose_login mark {
+    display: inline-block;
+    margin-left: -.5rem;
+    margin-bottom: .5rem;
+    padding: 2px .5rem;
+    background: #447A6A;
+    color: #fff;
+    border-radius: 0 0 .5rem 0;
+}
+
+/* color-css */
+.doctor-list .tabs .owl-item:nth-child(1) li,
+.doctor-list .tabs .owl-item:nth-child(11) li,
+.doctor-list .tabs .owl-item:nth-child(21) li,
+.register .list-body .list:nth-child(1) h3,
+.register .list-body .list:nth-child(11) h3,
+.register .list-body .list:nth-child(21) h3,
+.doctor-list .list-box:nth-child(1) .class-name,
+.doctor-list .list-box:nth-child(11) .class-name,
+.doctor-list .list-box:nth-child(21) .class-name {
+    background: #D5F2E8;
+}
+
+.doctor-list .tabs .owl-item:nth-child(2) li,
+.doctor-list .tabs .owl-item:nth-child(12) li,
+.doctor-list .tabs .owl-item:nth-child(22) li,
+.register .list-body .list:nth-child(2) h3,
+.register .list-body .list:nth-child(12) h3,
+.register .list-body .list:nth-child(22) h3,
+.doctor-list .list-box:nth-child(2) .class-name,
+.doctor-list .list-box:nth-child(12) .class-name,
+.doctor-list .list-box:nth-child(22) .class-name {
+    background: #f9efd9;
+}
+
+.doctor-list .tabs .owl-item:nth-child(3) li,
+.doctor-list .tabs .owl-item:nth-child(13) li,
+.doctor-list .tabs .owl-item:nth-child(23) li,
+.register .list-body .list:nth-child(3) h3,
+.register .list-body .list:nth-child(13) h3,
+.register .list-body .list:nth-child(23) h3,
+.doctor-list .list-box:nth-child(3) .class-name,
+.doctor-list .list-box:nth-child(13) .class-name,
+.doctor-list .list-box:nth-child(23) .class-name {
+    background: #f3d4d4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(4) li,
+.doctor-list .tabs .owl-item:nth-child(14) li,
+.doctor-list .tabs .owl-item:nth-child(24) li,
+.register .list-body .list:nth-child(4) h3,
+.register .list-body .list:nth-child(14) h3,
+.register .list-body .list:nth-child(24) h3,
+.doctor-list .list-box:nth-child(4) .class-name,
+.doctor-list .list-box:nth-child(14) .class-name,
+.doctor-list .list-box:nth-child(24) .class-name {
+    background: #BCB5E2;
+}
+
+.doctor-list .tabs .owl-item:nth-child(5) li,
+.doctor-list .tabs .owl-item:nth-child(15) li,
+.doctor-list .tabs .owl-item:nth-child(25) li,
+.register .list-body .list:nth-child(5) h3,
+.register .list-body .list:nth-child(15) h3,
+.register .list-body .list:nth-child(25) h3,
+.doctor-list .list-box:nth-child(5) .class-name,
+.doctor-list .list-box:nth-child(15) .class-name,
+.doctor-list .list-box:nth-child(25) .class-name {
+    background: #fbf2ac;
+}
+
+.doctor-list .tabs .owl-item:nth-child(6) li,
+.doctor-list .tabs .owl-item:nth-child(16) li,
+.doctor-list .tabs .owl-item:nth-child(26) li,
+.register .list-body .list:nth-child(6) h3,
+.register .list-body .list:nth-child(16) h3,
+.register .list-body .list:nth-child(26) h3,
+.doctor-list .list-box:nth-child(6) .class-name,
+.doctor-list .list-box:nth-child(16) .class-name,
+.doctor-list .list-box:nth-child(26) .class-name {
+    background: #d6ecc4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(7) li,
+.doctor-list .tabs .owl-item:nth-child(17) li,
+.doctor-list .tabs .owl-item:nth-child(27) li,
+.register .list-body .list:nth-child(7) h3,
+.register .list-body .list:nth-child(17) h3,
+.register .list-body .list:nth-child(27) h3,
+.doctor-list .list-box:nth-child(7) .class-name,
+.doctor-list .list-box:nth-child(17) .class-name,
+.doctor-list .list-box:nth-child(27) .class-name {
+    background: #fbe6c4;
+}
+
+.doctor-list .tabs .owl-item:nth-child(8) li,
+.doctor-list .tabs .owl-item:nth-child(18) li,
+.doctor-list .tabs .owl-item:nth-child(28) li,
+.register .list-body .list:nth-child(8) h3,
+.register .list-body .list:nth-child(18) h3,
+.register .list-body .list:nth-child(28) h3,
+.doctor-list .list-box:nth-child(8) .class-name,
+.doctor-list .list-box:nth-child(18) .class-name,
+.doctor-list .list-box:nth-child(28) .class-name {
+    background: #e3d1f1;
+}
+
+.doctor-list .tabs .owl-item:nth-child(9) li,
+.doctor-list .tabs .owl-item:nth-child(19) li,
+.doctor-list .tabs .owl-item:nth-child(29) li,
+.register .list-body .list:nth-child(9) h3,
+.register .list-body .list:nth-child(19) h3,
+.register .list-body .list:nth-child(29) h3,
+.doctor-list .list-box:nth-child(9) .class-name,
+.doctor-list .list-box:nth-child(19) .class-name,
+.doctor-list .list-box:nth-child(29) .class-name {
+    background: #c7dff9;
+}
+
+.doctor-list .tabs .owl-item:nth-child(10) li,
+.doctor-list .tabs .owl-item:nth-child(20) li,
+.doctor-list .tabs .owl-item:nth-child(30) li,
+.register .list-body .list:nth-child(10) h3,
+.register .list-body .list:nth-child(20) h3,
+.register .list-body .list:nth-child(30) h3,
+.doctor-list .list-box:nth-child(10) .class-name,
+.doctor-list .list-box:nth-child(20) .class-name,
+.doctor-list .list-box:nth-child(30) .class-name {
+    background: #f5cfdf;
+}
+
+.doctor-list .list-box:nth-child(1) .content,
+.doctor-list .list-box:nth-child(11) .content,
+.doctor-list .list-box:nth-child(21) .content,
+.register .list-body .list:nth-child(1) .content,
+.register .list-body .list:nth-child(11) .content,
+.register .list-body .list:nth-child(21) .content {
+    border-top-color: #D5F2E8;
+}
+
+.doctor-list .list-box:nth-child(2) .content,
+.doctor-list .list-box:nth-child(12) .content,
+.doctor-list .list-box:nth-child(22) .content,
+.register .list-body .list:nth-child(2) .content,
+.register .list-body .list:nth-child(12) .content,
+.register .list-body .list:nth-child(22) .content {
+    border-top-color: #f9efd9;
+}
+
+.doctor-list .list-box:nth-child(3) .content,
+.doctor-list .list-box:nth-child(13) .content,
+.doctor-list .list-box:nth-child(23) .content,
+.register .list-body .list:nth-child(3) .content,
+.register .list-body .list:nth-child(13) .content,
+.register .list-body .list:nth-child(23) .content {
+    border-top-color: #f3d4d4;
+}
+
+.doctor-list .list-box:nth-child(4) .content,
+.doctor-list .list-box:nth-child(14) .content,
+.doctor-list .list-box:nth-child(24) .content,
+.register .list-body .list:nth-child(4) .content,
+.register .list-body .list:nth-child(14) .content,
+.register .list-body .list:nth-child(24) .content {
+    border-top-color: #BCB5E2;
+}
+
+.doctor-list .list-box:nth-child(5) .content,
+.doctor-list .list-box:nth-child(15) .content,
+.doctor-list .list-box:nth-child(25) .content,
+.register .list-body .list:nth-child(5) .content,
+.register .list-body .list:nth-child(15) .content,
+.register .list-body .list:nth-child(25) .content {
+    border-top-color: #fbf2ac;
+}
+
+.doctor-list .list-box:nth-child(6) .content,
+.doctor-list .list-box:nth-child(16) .content,
+.doctor-list .list-box:nth-child(26) .content,
+.register .list-body .list:nth-child(6) .content,
+.register .list-body .list:nth-child(16) .content,
+.register .list-body .list:nth-child(26) .content {
+    border-top-color: #d6ecc4;
+}
+
+.doctor-list .list-box:nth-child(7) .content,
+.doctor-list .list-box:nth-child(17) .content,
+.doctor-list .list-box:nth-child(27) .content,
+.register .list-body .list:nth-child(7) .content,
+.register .list-body .list:nth-child(17) .content,
+.register .list-body .list:nth-child(27) .content {
+    border-top-color: #fbe6c4;
+}
+
+.doctor-list .list-box:nth-child(8) .content,
+.doctor-list .list-box:nth-child(18) .content,
+.doctor-list .list-box:nth-child(28) .content,
+.register .list-body .list:nth-child(8) .content,
+.register .list-body .list:nth-child(18) .content,
+.register .list-body .list:nth-child(28) .content {
+    border-top-color: #e3d1f1;
+}
+
+.doctor-list .list-box:nth-child(9) .content,
+.doctor-list .list-box:nth-child(19) .content,
+.doctor-list .list-box:nth-child(29) .content,
+.register .list-body .list:nth-child(9) .content,
+.register .list-body .list:nth-child(19) .content,
+.register .list-body .list:nth-child(29) .content {
+    border-top-color: #c7dff9;
+}
+
+.doctor-list .list-box:nth-child(10) .content,
+.doctor-list .list-box:nth-child(20) .content,
+.doctor-list .list-box:nth-child(30) .content,
+.register .list-body .list:nth-child(10) .content,
+.register .list-body .list:nth-child(20) .content,
+.register .list-body .list:nth-child(30) .content {
+    border-top-color: #f5cfdf;
+}
+
+.doctor-list .content-body .content,
+.register .list-body .list .content {
+    border-top: solid 5px;
+}
+
+.mobile-accord {
+    display: none;
+}
+
+.register .list ul li a {
+    text-decoration: none;
+}
+
+.content ul{display:flex !important;}
+.register .list ul li a{
+    padding: 0;
+}
+.content li a:before {
+    display: none;
+}
+
+.title2 .mjTitle {
+  display: block;
+  padding: 1.5rem 0 4.2rem;
+  margin: 2rem 0; 
+  border-top: solid thin #ddd;
+  border-bottom: solid thin #ddd;
+  position: relative;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.title2 .mjTitle:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #447A6A;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+.mjTitle .note-group {
+    float: right;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 1rem;
+    vertical-align: top;
+    font-size: 1rem;    
+}

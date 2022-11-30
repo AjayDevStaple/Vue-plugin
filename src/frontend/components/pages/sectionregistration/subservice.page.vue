@@ -84,92 +84,7 @@
                 </table>
             </div>
             
-            <!-- <div class="register-table">
-                <table class="table-border-radius">
-                    <thead>
-                        <tr>
-                            <td>
-                                <i class="fas fa-chevron-circle-down"></i>
-                            </td>
-                            <td>
-                                <h4>Wednesday</h4>
-                                <p>11/23</p>
-                            </td>
-                            <td>
-                                <h4>Thursday</h4>
-                                <p>11/24</p>
-                            </td>
-                            <td>
-                                <h4>Friday</h4>
-                                <p>11/25</p>
-                            </td>
-                            <td>
-                                <h4>Saturday</h4>
-                                <p>11/26</p>
-                            </td>
-                            <td>
-                                <h4>Sunday</h4>
-                                <p>11/27</p>
-                            </td>
-                            <td>
-                                <h4>Monday</h4>
-                                <p>11/28</p>
-                            </td>
-                            <td>
-                                <h4>Tuesday</h4>
-                                <p>11/29</p>
-                            </td>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p>
-                                    morning
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    Type: BNT full dose, the fourth dose needs to be separated from the third dose by 84
-                                    days, only open to the elderly over 50 years old, the first category of personnel,
-                                    airport ports, home quarantine, airline crew/crew, institutions and social welfare
-                                    care systems Workers, residents of long-term care institutions, people over 18 years
-                                    old who are immunocompromised, and people who need to go abroad for diplomatic,
-                                    official, business negotiation and other work needs.
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    Type: BNT for young children, doses 1-3 (limited to children aged 6 months to 4
-                                    years), location: pediatric clinic on the second floor
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    Type: BNT for young children, doses 1-3 (limited to children aged 6 months to 4
-                                    years), location: pediatric clinic on the second floor
-                                </p>
-                            </td>
-                            <td>e</td>
-                            <td>f</td>
-                            <td>g</td>
-                            <td>h</td>
-                        </tr>
-                        <tr>
-                            <td>a</td>
-                            <td>b</td>
-                            <td>c</td>
-                            <td>d</td>
-                            <td>e</td>
-                            <td>f</td>
-                            <td>g</td>
-                            <td>h</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            -->
+            
 
         </div>
     </div>
@@ -179,6 +94,7 @@
 <script lang="ts">
 import { _services } from './../../../../Services/Api/index'
 import BookingPageVue from '../Booking.page.vue'
+import { isProxy, toRaw } from 'vue';
 
 export default {
     name: 'HomePage',
@@ -201,13 +117,15 @@ export default {
     methods: {
         getData() {
             const data = {
+
+
                 "deptCode": "woman",
                 "deptRoom": "236",
                 "docCode": "3732",
-                "endDate": "2022-11-28",
+                "endDate": "2022-12-13",
                 "pass": "Kumar",
                 "shiftNo": "1",
-                "startDate": "2022-11-21",
+                "startDate": "2022-11-30",
                 "userId": "webapp"
             }
             _services.outGetWebSchebasic(data)
@@ -219,7 +137,7 @@ export default {
                 console.log(this.$route.query.abc)
                 /* this.arrayData0 = res.data.data[0]
                 this.arrayData1 = res.data.data[1] */
-                console.log('res1>>>>>', res.data.data)
+               
 
                 
                
@@ -230,14 +148,29 @@ export default {
         },
     },
     redirect(index) {
-            
-            console.log(this.arrayData0?.[index])
-            const data =  {
-                data : this.arrayData0?.[index]
-            }            
-            console.log(data)
+         
+            const data2send = {
+                "deptName" : toRaw(this.arrayData0?.[index].deptName),
+                "deptCode" : toRaw(this.arrayData0?.[index].deptCode),
+                "opdDate" : toRaw(this.arrayData0?.[index].opdDate),
+                "shiftNo" : toRaw(this.arrayData0?.[index].shiftNo),
+                "docName": toRaw(this.arrayData0?.[index].docName),
+                "webRoomDesc": toRaw(this.arrayData0?.[index].webRoomDesc),
+                "roomDesc": toRaw(this.arrayData0?.[index].roomDesc),
+                "nextNum" : toRaw(this.arrayData0?.[index].nextNum),
+                "deptRoom" : toRaw(this.arrayData0?.[index].deptRoom),
+                "docCode" : toRaw(this.arrayData0?.[index].docCode),
+                "regIp" : toRaw(this.arrayData0?.[index].regIp),
+                "regWay" : toRaw(this.arrayData0?.[index].regWay),
+            }
+          
+           
+                 
+            console.log('========> data of sub',data2send)
             this.$router.push({name: 'Booking',
-            params: data ,   
+            params: data2send ,
+            
+            
         }) 
         },
         createConversation: function (id) {
@@ -260,98 +193,6 @@ export default {
 }
 </script>
   
-<style>
-.card {
-    background: #ffffff30 !important;
-    backdrop-filter: blur(10px);
-    border-radius: 10px !important;
-}
+<style scoped src="../../pages/styles/subservice.page.css">
 
-.card-image {
-    border-radius: 10px 10px 0 0;
-    height: 15rem
-}
-
-.post-title {
-    font-size: 60px;
-}
-
-.sub-service .left-sub h2 {
-    font-size: 1.75rem;
-    font-weight: 400;
-}
-
-.sub-service .right-sub ul li {
-    margin: 0;
-    padding: 0;
-    line-height: 18px;
-}
-
-.sub-service table thead td:first-child {
-    width: 110px;
-}
-
-.sub-service table thead td {
-    color: #fff;
-    text-align: center;
-    width: calc((100% - 110px) / 6);
-    padding: 1em;
-    border-right: solid thin #ddd;
-}
-
-.sub-service table thead td .fas {
-    font-size: 2.4rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 0 5px 10px rgb(0 0 0 / 30%);
-}
-
-.sub-service table thead td h4 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: 400;
-}
-
-.sub-service table thead td p {
-    font-size: 18px;
-    margin: 0 !important;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-.sub-service table thead {
-    cursor: pointer;
-    background: #447A6A;
-}
-
-.sub-service .table-border-radius {
-    width: 100%;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
-    margin: 2rem 0;
-}
-
-.sub-service table tbody td {
-    vertical-align: middle;
-    text-align: center;
-    border-right: solid thin #ddd;
-}
-
-.sub-service table tbody td:last-child {
-    border-right: 0;
-}
-
-.sub-service table tbody tr:nth-child(even) {
-    background: #eef5f3;
-}
-
-.sub-service table tbody tr {
-    border-bottom: solid thin #ddd;
-}
-
-
-button.dropbtn {
-    background: transparent;
-    border-color: transparent;
-}
 </style>

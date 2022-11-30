@@ -1,0 +1,172 @@
+
+    .btn-div {
+        display: flex;
+    }
+    .b-page .main-head {
+      display: block;
+      padding: 1.5rem 0 1.2rem;
+      margin: 2rem 0;
+      border-top: solid thin #ddd;
+      border-bottom: solid thin #ddd;
+      position: relative;
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
+    
+    .b-page .Card {
+      border-width: 1px !important;
+      border-color: #447a6a !important;
+      height: 264px;
+      width: 100%;
+      border-radius: .75rem;
+      overflow: hidden;
+    }
+    .b-page .radio-box {
+        
+    }
+    .b-page .radio-box .radio-btns {
+        display: inline-block;
+        line-height: normal;
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    }
+    
+    .badage-style {
+      width: 90px;
+    }
+    .btn-div-suc .btn {
+      margin: 0 15px !important;
+      width: auto;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+    }
+    .btn-div-suc .btn:hover{
+      color: #fff;
+    }
+    .btn-div-suc .blue-btn {
+      background-color: #326c9e !important;
+    }
+    .btn1 {
+        flex-direction: row;
+      width: 90px;
+      background-color: white !important;
+      margin-left: 200px;
+      margin-top: 50px;
+      border-radius: 34px !important;
+      border: 1px solid #447a6a ;
+      text-align: center;
+      
+    }
+    
+    
+    .btn {
+        flex-direction: row;
+      width: 90px;
+      background-color: #447a6a !important;
+      margin-left: 110px;
+      margin-top: 50px;
+      border-radius: 34px !important;
+    }
+    .b-page .maindiv{
+        padding: 0 30px;
+    }
+    .b-page .maindiv-inner {
+        border-radius: 1rem;
+        box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    .b-page .firstDiv
+    {
+        border-right: solid 4px #447a6a;
+        padding: 2rem 2rem;
+    }
+    .firstDivCont .divFlex {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    
+    /*.radio-box input[type="radio"] {
+        display: none;
+    }*/
+    .radio-box label{
+        font-size: 18px;
+    }
+    .white-btn {
+      width: 90px;
+      margin-left: 200px;
+      margin-top: 50px;
+      border-radius: 34px !important;
+      background-color: white !important;
+      border-color: #447a6a !important;
+    }
+    
+    .firstDiv {
+      background-color: #e9f4ed;
+    }
+    
+    .firstDivCont {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .secondDiv {
+        padding: 2rem;
+        font-size: 18px;
+    }
+    .secondDiv .card .badge {
+        font-size: 18px;
+        line-height: 1.6;
+        width: 27%;
+        border-radius: 0 0 5px 0;
+    }
+    .b-page .main-head-red {
+      color: red;
+      font-size: 22.4px;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .form-group label {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+        width: 30px;
+    }
+    .form-group input, .form-group select {
+        padding: 0 0.5rem;
+        width: calc(100% - 40px);
+        height: 44px;
+        line-height: 44px;
+        border: solid thin #ddd;
+        outline: none;
+        transition: all .3s linear;
+        border-radius: 3px;
+    }
+    .form-group label i {
+        color: #447A6A;
+        font-size: 1.5rem;
+    }
+    .mid-text{
+        font-size: 18px;
+        line-height: 1.6;
+        padding-left: 40px;
+        display: block;
+    }
+    .box-red-btn {
+        font-size: 14.4px !important;
+        padding: 0 15px;
+    }
+    .tags {
+      background-color: #447a6a;
+      color: #fff;
+      width: 90px;
+      margin-right: 1rem;
+      padding: 0 0.5rem;
+      border-radius: 3px;
+      height: 100%;
+    }
+    .main-head .fa-check-circle {
+      color: #f39118;
+    }
