@@ -24,7 +24,7 @@
          </form> 
          <section style="position:relative;">
           <span id="main_dot" style="position:absolute;top:-120px"></span>
-         </section> <!--查詢結果直接顯示在下面--> 
+         </section>
          <div class="table-tips">
           <i class="fas fa-arrows-alt-h"></i><i class="far fa-hand-pointer"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Swipe left and right to see the full content
          </font></font></div> 
@@ -47,7 +47,7 @@
          <div class="btn-wrap"> <button type="button" onclick="javascript:location.href='health.php'" class="btn-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">News/ Video</font></font></button> <button type="button" onclick="javascript:location.href='register.php'" class="btn-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">I want to register</font></font></button> 
          </div> 
         </div> 
-        <article class="d-block d-lg-none"> <!--新增5固定項目，各3個文字欄位--> 
+        <article class="d-block d-lg-none">
         </article> 
        </section>
 

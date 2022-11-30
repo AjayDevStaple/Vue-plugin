@@ -1,0 +1,93 @@
+.card {
+    background: #ffffff30 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 10px !important;
+}
+
+.card-image {
+    border-radius: 10px 10px 0 0;
+    height: 15rem
+}
+
+.post-title {
+    font-size: 60px;
+}
+
+.sub-service .left-sub h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.sub-service .right-sub ul li {
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+}
+
+.sub-service table thead td:first-child {
+    width: 110px;
+}
+
+.sub-service table thead td {
+    color: #fff;
+    text-align: center;
+    width: calc((100% - 110px) / 6);
+    padding: 1em;
+    border-right: solid thin #ddd;
+}
+
+.sub-service table thead td .fas {
+    font-size: 2.4rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 5px 10px rgb(0 0 0 / 30%);
+}
+
+.sub-service table thead td h4 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.sub-service table thead td p {
+    font-size: 18px;
+    margin: 0 !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.sub-service table thead {
+    cursor: pointer;
+    background: #447A6A;
+}
+
+.sub-service .table-border-radius {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+    margin: 2rem 0;
+}
+
+.sub-service table tbody td {
+    vertical-align: middle;
+    text-align: center;
+    border-right: solid thin #ddd;
+}
+
+.sub-service table tbody td:last-child {
+    border-right: 0;
+}
+
+.sub-service table tbody tr:nth-child(even) {
+    background: #eef5f3;
+}
+
+.sub-service table tbody tr {
+    border-bottom: solid thin #ddd;
+}
+
+
+button.dropbtn {
+    background: transparent;
+    border-color: transparent;
+}

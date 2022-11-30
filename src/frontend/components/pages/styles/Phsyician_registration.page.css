@@ -1,0 +1,430 @@
+.register .list ul li {
+    display: inline-block;
+    float: left;
+    width: calc(100% / 5);
+    
+  }
+  .register .list ul {
+   
+  }
+  .two-group .info {
+    background: linear-gradient(135deg, #eef5f3 0%, rgba(238, 245, 243, 0.8) 100%),
+      url(../../../assets/sidebar-bg.png) left top/cover;
+    border-radius: 1rem 0 0 1rem;
+  }
+  
+  
+  /*依醫生掛號*/
+  
+  .tabs.owl-theme .owl-nav [class*="owl-"] {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    margin: -0.25rem 0.5rem 0;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #ddd;
+  }
+  .entry-content ol:not([class*=wp-]) li, .entry-content ul:not([class*=wp-]) li {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      list-style-type: none;
+  }
+  .tabs.owl-theme .owl-prev {
+    right: 100%;
+  }
+  .tabs.owl-theme .owl-next {
+    left: 100%;
+  }
+  .tabs.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #447a6a;
+  }
+  .doctor-list .tabs {
+    list-style: none;
+    padding-left: 0;
+    display: none;
+    margin-bottom: 0;
+  }
+  
+  .doctor-list .tabs li[class$="active"] a,
+  .doctor-list .tabs li[class$="hover"] a {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0.75rem;
+    background: transparent;
+    box-shadow: 0 15px 15px 1px rgba(0, 0, 0, 0.5);
+  }
+  .doctor-list .tabs li a {
+    display: block;
+    margin-top: 0 !important;
+    padding: 0.5rem 1.5rem;
+    /*background: rgba(255, 255, 255, 0.6);*/
+    text-decoration: none;
+    position: relative;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem 0.5rem 0 0;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  /* .doctor-list .list {
+    display: flex;
+    align-items: center;
+  } */
+  .p-regis-page .head-area h3{
+    border-right: 1px solid rgb(197, 197, 197) ;
+  }
+  .p-regis-page .list-area ul {
+    padding: 0;
+  }
+  .p-regis-page .list-area ul li {
+    display: inline-block;
+    width: 16.666667%;
+  }
+  .p-regis-page {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-top: 10px;
+  }
+  .p-regis-page:last-child {
+    border-bottom: 0 !important;
+  }
+  .doctor-list .content {
+    display: none;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    border: solid 1px #f0f0f0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    background: #fff;
+  }
+  .doctor-list .content h3 {
+    background: transparent;
+    color: #444;
+    width: 220px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .doctor-list .content h3:before {
+    display: none;
+  }
+  .doctor-list .content ul {
+    width: calc(100% - 220px);
+    padding-left: 1rem;
+    border-left: solid thin #ddd;
+  }
+  .doctor-list .content ul li {
+    width: auto;
+    float: none;
+    display: inline-block;
+  }
+  
+  .doctor-list .content-body .content,
+  .register .list-body .list .content {
+    border-top: solid 5px;
+  }
+  .doctor-list .list-box:nth-child(1) .content,
+  .doctor-list .list-box:nth-child(11) .content,
+  .doctor-list .list-box:nth-child(21) .content,
+  .register .list-body .list:nth-child(1) .content,
+  .register .list-body .list:nth-child(11) .content,
+  .register .list-body .list:nth-child(21) .content {
+    border-top-color: #d5f2e8;
+  }
+  .doctor-list .list-box:nth-child(2) .content,
+  .doctor-list .list-box:nth-child(12) .content,
+  .doctor-list .list-box:nth-child(22) .content,
+  .register .list-body .list:nth-child(2) .content,
+  .register .list-body .list:nth-child(12) .content,
+  .register .list-body .list:nth-child(22) .content {
+    border-top-color: #f9efd9;
+  }
+  
+  .top_massage {
+    margin: 2rem 0 2rem;
+    text-align: justify;
+  }
+  .top_massage .box {
+    list-style: none;
+    padding: 0 2rem 0 0;
+    margin-bottom: 0;
+  }
+  .top_massage .box span {
+    display: inline-block;
+    padding: 0 0.5rem;
+    color: #447a6a;
+    font-weight: 700;
+  }
+  .top_massage .mj {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #447a6a;
+    color: #fff;
+    text-align: center;
+  }
+  .top_massage li {
+    margin-bottom: 0.5rem;
+  }
+  .top_massage .item {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    letter-spacing: 0.05em;
+    border-right: solid 1px #447a6a;
+  }
+  .top_massage .night {
+    border-right: none;
+  }
+  
+  /*彈跳視窗*/
+  .popup-area {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .popup-area:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border-radius: 3px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+  }
+  .popup-area .inset {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    max-width: 100%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .popup-area [class^="btn"] {
+    -o-transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+  .popup-area .btn-X {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    background: #f39118;
+    color: #fff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-radius: 100%;
+    outline: none;
+  }
+  .popup-area .btn-X:hover {
+    background: #447a6a;
+  }
+  .form-box {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 2em;
+    background: #fff;
+    max-height: 80vh;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #eef5f3 0%, rgba(238, 245, 243, 0.8) 100%),
+      url(../../../assets/sidebar-bg.png) left top/cover;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .register .list ul li:nth-child(5n+1) {
+    clear: both;
+  }
+  .doctor-list .content ul li {
+    width: auto;
+    float: none;
+    display: inline-block;
+  }
+  .register .list ul li a {
+    display: block;
+    color: #444;
+    font-size: 1.25rem;
+    border-radius: 3px;
+  }
+  .dot_title {
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  .dot_title:before {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 1.25em;
+    width: 4px;
+    height: 4px;
+    margin-top: -0.2em;
+    border-radius: 100%;
+    background: #447a6a;
+  }
+  
+  @media screen and (min-width: 992px) {
+    /*麵包屑*/
+    .crumb .container {
+      padding: 0 3rem;
+    }
+    /*我要掛號-按鈕*/
+    .register .list:hover .content {
+      box-shadow: 0 8px 13px 1px rgba(0, 0, 0, 0.15);
+    }
+    .register .list .content {
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+    }
+  
+    /*依醫生掛號*/
+    .tabs.owl-carousel .owl-stage-outer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      overflow: hidden;
+    }
+    .tabs.owl-carousel .owl-stage-outer:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      right: 0;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    .doctor-list .tabs {
+      display: block;
+    }
+    .doctor-list .class-name {
+      display: none;
+    }
+    .doctor-list .content {
+      display: block;
+    }
+  }
+  .doctor-list {
+    margin: 2rem 0;
+  }
+  .doctor-list > ul {
+    margin: 0 !important;
+  }
+  
+  .p-regs .title2 .mjTitle {
+    display: block;
+    padding: 1.5rem 0 4.2rem;
+    margin: 2rem 0;
+    border-top: solid thin #ddd;
+    border-bottom: solid thin #ddd;
+    position: relative;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+  .p-regs .title2 .mjTitle:before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #447A6A;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+  .p-regs .mjTitle .note {
+    margin-bottom: 0;
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+  .p-regs .mjTitle .note-group {
+    float: right;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 1rem;
+  }
+  
+  @media screen and (min-width: 992px){
+  .doctor-list .tabs {
+      display: block;
+  }
+  }
+  .p-regs .owl-stage {
+    display: flex;
+  }
+  
+  .doctor-list .tabs {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      position: relative;
+  }
+  @media screen and (min-width: 992px){
+  .tabs.owl-carousel .owl-stage-outer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  }
+  .p-regs .owl-item li {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .doctor-list .tabs li a {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    /*background: rgba(255,255,255,0.6);*/
+    text-decoration: none;
+    position: relative;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+    border-radius: 0.5rem 0.5rem 0 0;
+    -o-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  .register .list ul li a:hover {
+    font-weight: 700;
+    color: #ffffff;
+    background: #326c9e;
+  }
+  
+  .p-regs .content-body .content {
+    margin-bottom: 12px;
+  }
+  .owl-item {
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+  }
+  
+  
+  
