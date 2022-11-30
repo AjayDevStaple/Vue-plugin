@@ -19,7 +19,7 @@
     box-shadow: 5px 0 1px -4px rgb(255 255 255 / 50%);
 }
 .Main-div .navbar-nav li.active a, .Main-div .navbar-nav li.active:hover a {
-    color: #fff;
+    color: #fff !important;
     font-weight: 700;
     border-bottom: solid 4px #fff;
 }

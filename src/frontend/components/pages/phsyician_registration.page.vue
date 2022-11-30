@@ -50,9 +50,7 @@
                 v-for="value in fulldata" :style="{'background-color': value.color}"
               >
                 <li class="">
-                  <a
-                    href="https://www-pohai-org-tw.translate.goog/register_doctor.php?_x_tr_sl=zh-TW&amp;_x_tr_tl=en&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=wapp#tabs-0"
-                    ><font style="vertical-align: inherit"
+                  <a :href="`${url}#/physician_registration`"><font style="vertical-align: inherit"
                       ><font style="vertical-align: inherit"> </font>
                       {{ value.deptSys }}</font
                     >
@@ -142,7 +140,7 @@ export default {
       const data = {
 
         pass: "Kumar",
-        type: "dept",
+        type: "doc",
         userId: "webapp",
       };
       _services
@@ -599,5 +597,12 @@ export default {
 .doctor-list .list-box:nth-child(10) .class-name,.doctor-list .list-box:nth-child(20) .class-name,.doctor-list .list-box:nth-child(30) .class-name{background: #f5cfdf;} */
 
 
+.list h3 a {
+  color: #444 !important;
+}
+
+li a {
+  color: #444 !important;
+}
 
 </style>

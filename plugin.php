@@ -1,25 +1,30 @@
 <?php
 /**
- * @link            https://danishashraf.net/
+ * @link            https://staplelogic.com/
  * @since           0.0.1
  * @package         wp-vue-starter
  *
  * Plugin Name: wp-vue-starter
- * Plugin URI: https://danishashraf.net/
- * Description:
+ * Plugin URI: https://staplelogic.com/
+ * Description: [wp-vue-frontend-app]
  * Version: 0.0.1
- * Author: Danish Ashraf
- * Author URI: https://danishashraf.net/
+ * Author: Staple Logic
+ * Author URI: https://staplelogic.com/
  * License: ISC
  * Text-Domain: textdomain
  */
 
-use wp_vue_starter\includes\Admin;
+/*use wp_vue_starter\includes\Admin;*/
+//use wp_vue_starter\includes\Frontend;
+//require_once(trailingslashit(plugin_dir_path(__FILE__).'includes/frontend.php');
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/frontend.php';
 use wp_vue_starter\includes\Frontend;
 
 if (!defined('ABSPATH')) exit(); // No direct access allowed
 
 require_once 'vendor/autoload.php';
+
 
 final class WPVueStarter
 {
@@ -70,8 +75,9 @@ final class WPVueStarter
 
     public function init_plugin()
     {
-        new Admin();
-        new Frontend();
+      /* var a =  new Admin();*/
+        //$this->render_frontend();
+        $a = new Frontend();
     }
 }
 
