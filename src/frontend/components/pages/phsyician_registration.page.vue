@@ -103,7 +103,7 @@
                     <a :href="`${url}#/subservice`"
                                 class="dot_title" title="COVID-19 Vaccination: BNT"><font style="vertical-align: inherit"
                         ><font style="vertical-align: inherit"
-                          >{{efgdata.docName}} 123455555555</font
+                          >{{efgdata.docName}}</font
                         ></font
                       ></a
                     >
